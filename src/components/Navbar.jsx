@@ -1,11 +1,14 @@
 function Navbar() {
     return (
         <nav style={styles.navbar}>
-            <a href="#hero" style={styles.link}>Home</a>
-            <a href="#about" style={styles.link}>About</a>
-            <a href="#projects" style={styles.link}>Projects</a>
-            <a href="#skills" style={styles.link}>Skills</a>
-            <a href="#contact" style={styles.link}>Contact</a>
+            <div style={styles.logo}>Gevindu Piyawansha</div>
+            <div>
+                <a href="#hero" style={styles.link}>Home</a>
+                <a href="#about" style={styles.link}>About</a>
+                <a href="#projects" style={styles.link}>Projects</a>
+                <a href="#skills" style={styles.link}>Skills</a>
+                <a href="#contact" style={styles.link}>Contact</a>
+            </div>
         </nav>
     );
 }
@@ -13,18 +16,24 @@ function Navbar() {
 const styles = {
     navbar: {
         display: 'flex',
-        justifyContent: 'center',
-        backgroundColor: '#333',
-        padding: '10px',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        backgroundColor: '#222',
+        padding: '15px 30px',
         position: 'sticky',
         top: 0,
         zIndex: 1000,
     },
+    logo: {
+        color: '#fff',
+        fontSize: '20px',
+        fontWeight: 'bold',
+    },
     link: {
         color: '#fff',
-        margin: '0 15px',
+        marginLeft: '20px',
         textDecoration: 'none',
-        fontSize: '18px',
+        fontSize: '16px',
     },
 };
 
