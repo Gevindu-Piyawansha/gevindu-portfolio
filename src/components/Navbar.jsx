@@ -9,15 +9,12 @@ function Navbar() {
             setIsScrolled(window.scrollY > 50);
 
             const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'education', 'contact'];
-            const current = sections.find((section) => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    return rect.top <= 100 && rect.bottom >= 100;
-                }
-                return false;
+            const current = sections.find(section => {
+                const el = document.getElementById(section);
+                if (!el) return false;
+                const rect = el.getBoundingClientRect();
+                return rect.top <= 100 && rect.bottom >= 100;
             });
-
             if (current) setActiveSection(current);
         };
 
@@ -25,28 +22,33 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const scrollToSection = (sectionId) => {
+    const scrollToSection = sectionId => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 overflow-x-hidden ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+            className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-blue-100/90 backdrop-blur-md shadow-md' : 'bg-transparent'
                 }`}
+            style={{ height: '64px' }}
         >
-            <div className="w-full max-w-6xl mx-auto px-6 py-4 flex justify-between items-center overflow-x-hidden">
+            {/* Use the exact same container width class as Hero */}
+            <div className="max-w-4xl mx-auto px-6 py-4 flex justify-center items-center h-full">
+                {/* Left brand text with margin-right auto */}
                 <div
-                    className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent cursor-pointer"
+                    className="text-4xl font-bold text-blue-800 cursor-pointer mr-12"
                     onClick={() => scrollToSection('hero')}
                 >
-                    Gevindu Piyawansha
+                    Portfolio
                 </div>
+
+                {/* Centered menu */}
                 <div className="hidden md:flex space-x-8">
-                    {['hero', 'about', 'experience', 'projects', 'skills', 'education', 'contact'].map((section) => (
+                    {['hero', 'about', 'experience', 'projects', 'skills', 'education', 'contact'].map(section => (
                         <button
                             key={section}
                             onClick={() => scrollToSection(section)}
-                            className={`capitalize transition-colors duration-200 ${activeSection === section ? 'text-blue-600 font-semibold' : 'text-gray-700 hover:text-blue-600'
+                            className={`capitalize transition-colors duration-200 ${activeSection === section ? 'text-blue-600 font-semibold bg-gray-200 rounded-md px-3 py-1' : 'text-gray-600 hover:text-blue-600'
                                 }`}
                         >
                             {section === 'hero' ? 'Home' : section}

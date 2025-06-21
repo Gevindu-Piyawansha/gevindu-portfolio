@@ -1,6 +1,22 @@
-import { Code, MapPin, ChevronDown } from 'lucide-react';
+import { Code, MapPin, ChevronDown, Github, Linkedin } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 function Hero() {
+    const [currentRole, setCurrentRole] = useState(0);
+    const roles = [
+        'Full-Stack Developer',
+        'Problem Solver',
+        'Team Collaborator',
+        'Continuous Learner'
+    ];
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentRole((prev) => (prev + 1) % roles.length);
+        }, 3000);
+        return () => clearInterval(interval);
+    }, []);
+
     const scrollToSection = (sectionId) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
@@ -8,60 +24,108 @@ function Hero() {
     return (
         <section
             id="hero"
-            className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-blue-100 text-center px-6 relative"
+            className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-blue-100 text-center px-4 sm:px-6 relative overflow-visible pt-24"
         >
-            {/* Circular Avatar */}
-            <div className="w-28 h-28 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-3xl font-bold mb-6 shadow-lg">
-                GP
+
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-5">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.3)_1px,transparent_0)] bg-[size:50px_40px]"></div>
             </div>
 
-            {/* Name */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-700 mb-2">
+            {/* Professional Avatar */}
+            <div className="relative mb-8 flex justify-center">
+                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-2xl sm:text-4xl font-bold shadow-2xl">
+                    GP
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-green-500 rounded-full border-4 border-white flex items-center justify-center">
+                    <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
+                </div>
+            </div>
+
+            {/* Name with enhanced typography */}
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-700 mb-2 leading-tight">
                 Gevindu Piyawansha
             </h1>
 
-            {/* Subtitle */}
-            <h2 className="text-lg sm:text-xl text-gray-700 mb-4 font-medium">
-                Aspiring Full-Stack Developer
-            </h2>
+            {/* Animated Role Subtitle */}
+            <div className="h-8 sm:h-10 mb-6">
+                <h2 className="text-lg sm:text-xl lg:text-2xl text-gray-700 font-medium transition-all duration-500">
+                    Aspiring {roles[currentRole]}
+                </h2>
+            </div>
 
-            {/* Skills and Location */}
-            <div className="flex flex-wrap justify-center items-center gap-6 mb-6 text-gray-600 text-base sm:text-lg">
-                <div className="flex items-center gap-2">
-                    <Code className="w-5 h-5 text-blue-600" />
-                    <span>Java • Spring Boot • React</span>
+            {/* Enhanced Skills and Location */}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 mb-6 text-gray-600 text-sm sm:text-lg">
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                    <Code className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+                    <span className="font-medium">Java • Spring Boot • React</span>
                 </div>
-                <div className="flex items-center gap-2">
-                    <MapPin className="w-5 h-5 text-blue-600" />
-                    <span>Stavanger, Norway</span>
+                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+                    <span className="font-medium">Stavanger, Norway</span>
                 </div>
             </div>
 
-            {/* Description */}
-            <p className="max-w-xl text-gray-700 text-base sm:text-lg mb-8 px-4 leading-relaxed">
-                Civil Engineer turned Software Developer with Norwegian residence permit, seeking junior developer
-                opportunities in Norway's thriving tech sector.
-            </p>
+            {/* Enhanced Description */}
+            <div className="max-w-2xl mb-8 px-4">
+                <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
+                    Civil Engineer turned Software Developer with <span className="font-semibold text-blue-600">residence permit</span>,
+                    bringing analytical thinking and problem-solving expertise to modern web development.
+                </p>
+                <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-600">
+                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full">✓ Work Authorization</span>
+                    <span className="bg-green-50 text-green-700 px-3 py-1 rounded-full">✓ Immediate Start</span>
+                    <span className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full">✓ Open to Relocation</span>
+                </div>
+            </div>
 
-            {/* Buttons */}
-            <div className="flex gap-4 flex-wrap justify-center">
+            {/* Enhanced Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <button
                     onClick={() => scrollToSection('projects')}
-                    className="px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-transform duration-200"
+                    className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 shadow-md"
                 >
                     View My Work
                 </button>
                 <button
                     onClick={() => scrollToSection('contact')}
-                    className="px-8 py-3 rounded-full border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200"
+                    className="px-6 sm:px-8 py-3 rounded-full border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200"
                 >
                     Get In Touch
                 </button>
             </div>
 
-            {/* Down Arrow */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-                <ChevronDown className="w-8 h-8 text-gray-400" />
+            {/* Social Links */}
+            <div className="flex gap-6 mb-12">
+                <a
+                    href="https://github.com/Gevindu-Piyawansha"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover:text-blue-600 hover:scale-110 transition-all duration-200 shadow-md"
+                    aria-label="GitHub Profile"
+                >
+                    <Github className="w-5 h-5" />
+                </a>
+                <a
+                    href="https://www.linkedin.com/in/gevindu-piyawansha/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center text-gray-700 hover:text-blue-600 hover:scale-110 transition-all duration-200 shadow-md"
+                    aria-label="LinkedIn Profile"
+                >
+                    <Linkedin className="w-5 h-5" />
+                </a>
+            </div>
+
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <button
+                    onClick={() => scrollToSection('about')}
+                    className="w-8 h-8 rounded-full bg-white/50 backdrop-blur-sm flex items-center justify-center hover:bg-white/70 transition-colors"
+                    aria-label="Scroll to about section"
+                >
+                    <ChevronDown className="w-5 h-5 text-gray-600" />
+                </button>
             </div>
         </section>
     );

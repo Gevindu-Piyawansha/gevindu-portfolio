@@ -1,3 +1,4 @@
+/* Global Body Styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,35 +7,47 @@ body {
   color: #333;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  /* ADD THIS LINE */
+  /* prevent horizontal scroll */
 }
 
-
-section {
-  padding: 80px 20px;
+/* Container wrapper to center and limit max width */
+.container {
   max-width: 1000px;
-  margin: auto;
+  /* adjust max width as needed */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
+/* Section styling fills container width */
+section {
+  padding: 80px 0;
+  /* vertical padding */
+  width: 100%;
+}
+
+/* Hero Section styling */
 #hero {
   background-color: #282c34;
   color: white;
-  padding: 120px 20px;
+  padding: 120px 0;
   text-align: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
+  width: 100%;
 }
 
+/* Headings */
 h1,
 h2,
 h3 {
   margin: 10px 0;
 }
 
+/* List Styling */
 ul {
   list-style-type: none;
   padding: 0;
@@ -44,6 +57,7 @@ ul li {
   margin: 10px 0;
 }
 
+/* Links */
 a {
   color: #0077cc;
   text-decoration: none;
