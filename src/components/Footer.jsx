@@ -101,7 +101,7 @@ function Footer() {
                 <div className="text-right text-gray-300 text-sm whitespace-nowrap w-full md:w-auto">
                     <p>📧 gevindu.piyawansha@gmail.com</p>
                     <p>📱 +47 99875112</p>
-                    <p>📍 Stavanger, Rogaland</p>
+                    <p>📍 Stavanger, Norway</p>
                 </div>
             </div>
 
