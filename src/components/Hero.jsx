@@ -24,8 +24,9 @@ function Hero() {
     return (
         <section
             id="hero"
-            className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-blue-100 text-center px-4 sm:px-6 relative overflow-visible pt-24"
+            className="min-h-[600px] flex flex-col items-center justify-center bg-gradient-to-br from-slate-100 to-blue-100 text-center px-4 sm:px-6 relative overflow-visible pt-24"
         >
+
 
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5">
@@ -54,30 +55,9 @@ function Hero() {
                 </h2>
             </div>
 
-            {/* Enhanced Skills and Location */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 sm:gap-6 mb-6 text-gray-600 text-sm sm:text-lg">
-                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
-                    <Code className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-                    <span className="font-medium">Java • Spring Boot • React</span>
-                </div>
-                <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm">
-                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-                    <span className="font-medium">Stavanger, Norway</span>
-                </div>
-            </div>
 
-            {/* Enhanced Description */}
-            <div className="max-w-2xl mb-8 px-4">
-                <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
-                    Civil Engineer turned Software Developer with <span className="font-semibold text-blue-600">residence permit</span>,
-                    bringing analytical thinking and problem-solving expertise to modern web development.
-                </p>
-                <div className="flex flex-wrap justify-center gap-3 text-sm text-gray-600">
-                    <span className="bg-blue-50 text-blue-700 px-3 py-1 rounded-full">✓ Work Authorization</span>
-                    <span className="bg-green-50 text-green-700 px-3 py-1 rounded-full">✓ Immediate Start</span>
-                    <span className="bg-purple-50 text-purple-700 px-3 py-1 rounded-full">✓ Open to Relocation</span>
-                </div>
-            </div>
+
+
 
             {/* Enhanced Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">

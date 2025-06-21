@@ -6,14 +6,12 @@ body {
   background-color: #f9f9f9;
   color: #333;
   scroll-behavior: smooth;
-  overflow-x: hidden;
-  /* prevent horizontal scroll */
+  overflow-x: hidden; /* prevent horizontal scroll */
 }
 
 /* Container wrapper to center and limit max width */
 .container {
-  max-width: 1000px;
-  /* adjust max width as needed */
+  max-width: 1000px; /* adjust max width as needed */
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -22,8 +20,7 @@ body {
 
 /* Section styling fills container width */
 section {
-  padding: 80px 0;
-  /* vertical padding */
+  padding: 80px 0; /* vertical padding */
   width: 100%;
 }
 
@@ -41,9 +38,7 @@ section {
 }
 
 /* Headings */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin: 10px 0;
 }
 
