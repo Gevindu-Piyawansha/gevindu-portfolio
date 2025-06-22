@@ -8,7 +8,7 @@ export default function ExperienceSection() {
             <h2 className="text-3xl font-bold mb-8 text-center">EXPERIENCE</h2>
             <div className="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto px-6">
                 {/* Left Column: Skill Icons */}
-                <div className="grid grid-cols-4 gap-6 md:w-1/2">
+                <div className="grid grid-cols-4 gap-6 md:w-1/2 pr-30">
                     {[
                         { icon: FaJava, color: 'text-yellow-500', label: 'Java' },
                         { icon: FaJs, color: 'text-yellow-400', label: 'JavaScript' },
@@ -31,7 +31,7 @@ export default function ExperienceSection() {
                 </div>
 
                 {/* Right side - experience details */}
-                <div className="md:w-1/2 space-y-6 bg-white p-6 rounded-lg shadow-lg">
+                <div className="max-w-4xl space-y-6 bg-white p-6 rounded-lg shadow-lg ml-auto pl-20 pr-20">
                     <div>
                         <h3 className="text-xl font-semibold text-gray-800">Trainee Software Engineer, IJSE</h3>
                         <span className="text-sm italic text-gray-600"> 2024 - Present</span>

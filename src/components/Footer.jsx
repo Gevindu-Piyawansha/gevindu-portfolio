@@ -6,6 +6,7 @@ import {
     Mail,
     Phone,
     ArrowUp,
+    ChevronUp,
 } from 'lucide-react';
 
 function Footer() {
@@ -41,6 +42,7 @@ function Footer() {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
 
     return (
         <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
@@ -116,18 +118,24 @@ function Footer() {
                         <Heart className="w-4 h-4 text-red-500 fill-current" />
                         <span>for the tech community</span>
                     </div>
-                    <button
-                        onClick={scrollToTop}
-                        className="group flex items-center gap-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-all duration-300 transform hover:scale-105"
-                        aria-label="Back to top"
-                    >
-                        <span className="text-gray-300 text-sm">Back to top</span>
-                        <ArrowUp className="w-3 h-3 text-gray-300 group-hover:text-white transition-colors" />
-                    </button>
+
+                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
+                        <button
+                            onClick={scrollToTop}
+                            className="px-2 py-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-600 text-white flex items-center justify-center gap-1 transition-all duration-300 transform hover:scale-105 shadow-md text-xs"
+                            aria-label="Scroll to top"
+                        >
+                            <ChevronUp className="w-3 h-3 text-white" />
+                            <span>Back to Top</span>
+                        </button>
+
+                    </div>
+ 
                 </div>
             </div>
         </footer>
     );
 }
+
 
 export default Footer;

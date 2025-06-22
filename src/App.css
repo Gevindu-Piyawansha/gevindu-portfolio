@@ -1,17 +1,21 @@
 /* Global Body Styling */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f9f9f9;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background-color: #f0f4f8;
   color: #333;
-  scroll-behavior: smooth;
-  overflow-x: hidden; /* prevent horizontal scroll */
+  overflow-x: hidden;
+  overflow-y: auto;      /* ✅ this is needed! */
+  scroll-behavior: smooth;  /* ✅ smooth scrolling */
 }
+
 
 /* Container wrapper to center and limit max width */
 .container {
-  max-width: 1000px; /* adjust max width as needed */
+  max-width: 1000px;
+  /* adjust max width as needed */
   margin-left: auto;
   margin-right: auto;
   padding-left: 20px;
@@ -20,7 +24,8 @@ body {
 
 /* Section styling fills container width */
 section {
-  padding: 80px 0; /* vertical padding */
+  padding: 80px 0;
+  /* vertical padding */
   width: 100%;
 }
 
@@ -38,7 +43,9 @@ section {
 }
 
 /* Headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 10px 0;
 }
 

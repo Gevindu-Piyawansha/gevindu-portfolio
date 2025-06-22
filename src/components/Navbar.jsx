@@ -8,7 +8,7 @@ function Navbar() {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
 
-            const sections = ['hero', 'about', 'experience', 'projects', 'skills', 'education', 'contact'];
+            const sections = ['hero', 'about', 'experience', 'projects', 'education'];
             const current = sections.find(section => {
                 const el = document.getElementById(section);
                 if (!el) return false;
@@ -22,36 +22,45 @@ function Navbar() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const scrollToSection = sectionId => {
+    const scrollToSection = (sectionId) => {
         document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     };
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-blue-100/90 backdrop-blur-md shadow-md' : 'bg-transparent'
+            className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled
+                    ? 'bg-white/90 backdrop-blur-md shadow-md border-b border-gray-100'
+                    : 'bg-white/70 backdrop-blur-sm'
                 }`}
-            style={{ height: '64px' }}
         >
-            {/* Use the exact same container width class as Hero */}
-            <div className="max-w-4xl mx-auto px-6 py-4 flex justify-center items-center h-full">
-                {/* Left brand text with margin-right auto */}
+            <div className="max-w-6xl mx-auto px-6 lg:px-12 py-4 flex justify-between items-center">
                 <div
-                    className="text-4xl font-bold text-blue-800 cursor-pointer mr-12"
+                    className="text-3xl font-extrabold text-blue-600 cursor-pointer hover:opacity-80 transition pr-30"
                     onClick={() => scrollToSection('hero')}
                 >
                     Portfolio
                 </div>
 
-                {/* Centered menu */}
-                <div className="hidden md:flex space-x-8">
-                    {['hero', 'about', 'experience', 'projects', 'skills', 'education', 'contact'].map(section => (
+                <div className="hidden md:flex space-x-10">
+                    {[
+                        { id: 'hero', label: 'Home' },
+                        { id: 'about', label: 'About' },
+                        { id: 'experience', label: 'Experience' },
+                        { id: 'projects', label: 'Projects' },
+                        { id: 'education', label: 'Education' }
+                    ].map(section => (
                         <button
-                            key={section}
-                            onClick={() => scrollToSection(section)}
-                            className={`capitalize transition-colors duration-200 ${activeSection === section ? 'text-blue-600 font-semibold bg-gray-200 rounded-md px-3 py-1' : 'text-gray-600 hover:text-blue-600'
+                            key={section.id}
+                            onClick={() => scrollToSection(section.id)}
+                            className={`relative px-3 py-2 text-base font-medium transition ${activeSection === section.id
+                                    ? 'text-blue-700'
+                                    : 'text-gray-600 hover:text-blue-600'
                                 }`}
                         >
-                            {section === 'hero' ? 'Home' : section}
+                            {section.label}
+                            {activeSection === section.id && (
+                                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-1 rounded-full bg-blue-600 transition-all duration-300"></div>
+                            )}
                         </button>
                     ))}
                 </div>
