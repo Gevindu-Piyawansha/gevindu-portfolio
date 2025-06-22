@@ -61,7 +61,7 @@ function Footer() {
                 {/* Brand & Social */}
                 <div className="flex flex-col justify-between md:flex-row md:items-center md:gap-8 w-full md:w-auto">
                     <div>
-                        <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 whitespace-nowrap">
+                        <h3 className="pt-12 text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 whitespace-nowrap">
                             Feel free to reach out
                         </h3>
                         <p className="text-gray-400 mb-6 flex items-center gap-2">
@@ -100,7 +100,7 @@ function Footer() {
                 </div>
 
                 {/* Contact Info - aligned right */}
-                <div className="text-right text-gray-300 text-sm whitespace-nowrap w-full md:w-auto">
+                <div className="pt-12 text-right text-gray-300 text-sm whitespace-nowrap w-full md:w-auto">
                     <p>📧 gevindu.piyawansha@gmail.com</p>
                     <p>📱 +47 99875112</p>
                     <p>📍 Stavanger, Norway</p>
@@ -109,7 +109,7 @@ function Footer() {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-700 mt-4 pt-4 max-w-7xl mx-auto px-8 sm:px-8 lg:px-8">
-                <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div className="pb-3 flex flex-col sm:flex-row justify-between items-center gap-4">
                     <p className="text-gray-400 text-sm text-center sm:text-left">
                         © {currentYear} Gevindu Piyawansha. All rights reserved.
                     </p>
@@ -119,18 +119,16 @@ function Footer() {
                         <span>for the tech community</span>
                     </div>
 
-                    <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
+                    {/* Floating scroll-to-top button */}
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
                         <button
                             onClick={scrollToTop}
-                            className="px-2 py-1 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-600 text-white flex items-center justify-center gap-1 transition-all duration-300 transform hover:scale-105 shadow-md text-xs"
+                            className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-600 flex items-center justify-center transition-all duration-300 transform hover:scale-105 shadow-md"
                             aria-label="Scroll to top"
                         >
-                            <ChevronUp className="w-3 h-3 text-white" />
-                            <span>Back to Top</span>
+                            <ChevronUp className="w-4 h-4 text-white" />
                         </button>
-
                     </div>
- 
                 </div>
             </div>
         </footer>
