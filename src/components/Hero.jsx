@@ -1,4 +1,4 @@
-import { ChevronDown, Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 function Hero() {
@@ -13,7 +13,7 @@ function Hero() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentRole((prev) => (prev + 1) % roles.length);
-        }, 3000);
+        }, 1500);
         return () => clearInterval(interval);
     }, []);
 
@@ -24,20 +24,27 @@ function Hero() {
     return (
         <section
             id="hero"
-            class="w-full min-h-[70vh] bg-gradient-to-br from-slate-100 to-blue-100 relative overflow-hidden py-2"
+            className="w-full min-h-[80vh] bg-gradient-to-br from-slate-100 to-blue-100 relative overflow-hidden py-8 px-4 sm:px-6 lg:px-12"
         >
-
-
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-5 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.3)_1px,transparent_0)] bg-[size:50px_40px]"></div>
             </div>
 
-            <div className="max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col-reverse md:flex-row items-center justify-between min-h-[calc(0vh-6rem)] relative z-10 gap-16">
+            <div className="max-w-[1400px] mx-auto flex flex-col md:flex-row items-center justify-center min-h-[80vh] md:min-h-screen relative z-10 gap-10 md:gap-20">
 
-                {/* Left side - Text content */}
-                <div className="flex flex-col justify-center items-center text-center w-full md:w-1/2 space-y-6 pl-8 pr-38">
-                    <h1 className="whitespace-nowrap text-3xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-700 leading-tight">
+                {/* Profile Photo */}
+                <div className="w-full md:w-1/2 flex justify-center items-center px-6">
+                    <img
+                        src="/profile.jpg"
+                        alt="Gevindu Piyawansha"
+                        className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full object-cover shadow-2xl border-4 border-white"
+                    />
+                </div>
+
+                {/* Text Content */}
+                <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left w-full md:w-1/2 space-y-6 pt-4 pb-8">
+                    <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-700 leading-normal">
                         Gevindu Piyawansha
                     </h1>
 
@@ -45,7 +52,7 @@ function Hero() {
                         Aspiring {roles[currentRole]}
                     </h2>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <button
                             onClick={() => scrollToSection('projects')}
                             className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 shadow-md"
@@ -60,7 +67,7 @@ function Hero() {
                         </button>
                     </div>
 
-                    <div className="flex gap-6 justify-center">
+                    <div className="flex gap-6 justify-center md:justify-start">
                         <a
                             href="https://github.com/Gevindu-Piyawansha"
                             target="_blank"
@@ -80,37 +87,10 @@ function Hero() {
                             <Linkedin className="w-5 h-5" />
                         </a>
                     </div>
-
-
-                </div>
-
-                {/* Right side - Profile Photo with badge */}
-                <div className="w-full md:w-1/2 flex justify-center items-center relative pl-25">
-                    <div className="relative">
-                        <img
-                            src="/profile.jpg"
-                            alt="Gevindu Piyawansha"
-                            className="w-72 h-72 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full object-cover shadow-2xl border-4 border-white"
-                        />
-
-                    </div>
                 </div>
 
             </div>
-
-            {/* Scroll Indicator */}
-            <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center animate-bounce">
-                <button
-                    onClick={() => scrollToSection('about')}
-                    className="w-4 h-2 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-600 flex items-center justify-center transition-all duration-300 transform hover:scale-105 shadow-md"
-                    aria-label="Scroll to about section"
-                >
-
-                    <ChevronDown className="w-2 h-1 text-gray-900 -mt-1" />
-
-                </button>
-            </div>
-        </section >
+        </section>
     );
 }
 

@@ -44,7 +44,7 @@ function Navbar() {
                 <div className="hidden md:flex space-x-10">
                     {[
                         { id: 'hero', label: 'Home' },
-                        { id: 'about', label: 'About' },
+                        { id: 'about', label: 'About Me' },
                         { id: 'experience', label: 'Experience' },
                         { id: 'projects', label: 'Projects' },
                         { id: 'education', label: 'Education' }

@@ -5,7 +5,6 @@ import {
     Linkedin,
     Mail,
     Phone,
-    ArrowUp,
     ChevronUp,
 } from 'lucide-react';
 
@@ -43,7 +42,6 @@ function Footer() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-
     return (
         <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white relative overflow-hidden">
             {/* Background Pattern */}
@@ -57,83 +55,87 @@ function Footer() {
                 ></div>
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 lg:px- py-12 sm:py-2 flex flex-col md:flex-row justify-between items-center gap-8">
-                {/* Brand & Social */}
-                <div className="flex flex-col justify-between md:flex-row md:items-center md:gap-8 w-full md:w-auto">
-                    <div>
-                        <h3 className="pt-12 text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 whitespace-nowrap">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+                {/* Main Content */}
+                <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-12">
+                    {/* Left Section */}
+                    <div className="text-center lg:text-left flex-1">
+                        <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
                             Feel free to reach out
                         </h3>
-                        <p className="text-gray-400 mb-6 flex items-center gap-2">
-                            <Code className="w-5 h-5" />
+                        <p className="text-gray-400 mb-6 flex items-center justify-center lg:justify-start gap-2">
+                            <Code className="w-4 h-4 sm:w-5 sm:h-5" />
                             Built with React & Tailwind CSS
                         </p>
+
+                        {/* Social Links */}
+                        <div className="flex gap-3 sm:gap-4 justify-center lg:justify-start flex-wrap">
+                            {socialLinks.map((social, idx) => {
+                                const IconComp = social.icon;
+                                return (
+                                    <a
+                                        key={idx}
+                                        href={social.href}
+                                        target={
+                                            social.href.startsWith('mailto:') ||
+                                                social.href.startsWith('tel:')
+                                                ? '_self'
+                                                : '_blank'
+                                        }
+                                        rel={
+                                            social.href.startsWith('mailto:') ||
+                                                social.href.startsWith('tel:')
+                                                ? undefined
+                                                : 'noopener noreferrer'
+                                        }
+                                        className={`w-10 h-10 sm:w-12 sm:h-12 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 ${social.hoverColor} hover:bg-gray-600 transition-all duration-300 transform hover:scale-110`}
+                                        aria-label={social.name}
+                                    >
+                                        <IconComp className="w-4 h-4 sm:w-5 sm:h-5" />
+                                    </a>
+                                );
+                            })}
+                        </div>
                     </div>
 
-                    <div className="flex gap-4 flex-wrap md:flex-nowrap">
-                        {socialLinks.map((social, idx) => {
-                            const IconComp = social.icon;
-                            return (
-                                <a
-                                    key={idx}
-                                    href={social.href}
-                                    target={
-                                        social.href.startsWith('mailto:') ||
-                                            social.href.startsWith('tel:')
-                                            ? '_self'
-                                            : '_blank'
-                                    }
-                                    rel={
-                                        social.href.startsWith('mailto:') ||
-                                            social.href.startsWith('tel:')
-                                            ? undefined
-                                            : 'noopener noreferrer'
-                                    }
-                                    className={`w-10 h-10 bg-gray-700 rounded-lg flex items-center justify-center text-gray-300 ${social.hoverColor} hover:bg-gray-600 transition-all duration-300 transform hover:scale-110`}
-                                    aria-label={social.name}
-                                >
-                                    <IconComp className="w-5 h-5" />
-                                </a>
-                            );
-                        })}
+                    {/* Right Section */}
+                    <div className="text-center lg:text-right text-gray-300 text-sm sm:text-base space-y-1 sm:space-y-2 flex-shrink-0">
+                        <p className="flex items-center justify-center lg:justify-end gap-2">
+                            <span>📧</span>
+                            <span className="break-all">gevindu.piyawansha@gmail.com</span>
+                        </p>
+                        <p className="flex items-center justify-center lg:justify-end gap-2">
+                            <span>📱</span>
+                            <span>+47 99875112</span>
+                        </p>
+                        <p className="flex items-center justify-center lg:justify-end gap-2">
+                            <span>📍</span>
+                            <span>Stavanger, Norway</span>
+                        </p>
                     </div>
-                </div>
-
-                {/* Contact Info - aligned right */}
-                <div className="pt-12 text-right text-gray-300 text-sm whitespace-nowrap w-full md:w-auto">
-                    <p>📧 gevindu.piyawansha@gmail.com</p>
-                    <p>📱 +47 99875112</p>
-                    <p>📍 Stavanger, Norway</p>
                 </div>
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-700 mt-4 pt-4 max-w-7xl mx-auto px-8 sm:px-8 lg:px-8">
-                <div className="pb-3 flex flex-col sm:flex-row justify-between items-center gap-4">
-                    <p className="text-gray-400 text-sm text-center sm:text-left">
-                        © {currentYear} Gevindu Piyawansha. All rights reserved.
-                    </p>
-                    <div className="hidden sm:flex items-center gap-2 text-gray-400 text-sm">
-                        <span>Made with</span>
-                        <Heart className="w-4 h-4 text-red-500 fill-current" />
-                        <span>for the tech community</span>
-                    </div>
+            <div className="border-t border-gray-700 relative z-10">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+                        <p className="text-gray-400 text-xs sm:text-sm">
+                            © {currentYear} Gevindu Piyawansha. All rights reserved.
+                        </p>
 
-                    {/* Floating scroll-to-top button */}
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 animate-bounce">
-                        <button
-                            onClick={scrollToTop}
-                            className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-purple-600 hover:to-blue-600 flex items-center justify-center transition-all duration-300 transform hover:scale-105 shadow-md"
-                            aria-label="Scroll to top"
-                        >
-                            <ChevronUp className="w-4 h-4 text-white" />
-                        </button>
+                        <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
+                            <span>Made with</span>
+                            <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500 fill-current" />
+                            <span>for the tech community</span>
+                        </div>
                     </div>
                 </div>
+
+                
             </div>
         </footer>
     );
 }
-
 
 export default Footer;
