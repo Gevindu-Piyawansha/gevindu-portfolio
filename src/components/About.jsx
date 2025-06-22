@@ -50,8 +50,8 @@ function About() {
                         <div className="bg-gradient-to-br from-green-50 to-blue-50 p-4 sm:p-6 rounded-xl shadow-md">
                             <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-green-600 mb-3" />
                             <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">Location & Work Rights</h4>
-                            <p className="text-gray-700 text-sm sm:text-base">Stavanger resident with full work authorization</p>
-                            <p className="text-gray-600 text-xs sm:text-sm mt-1">Open to opportunities nationwide + remote work</p>
+                            <p className="text-gray-700 text-sm sm:text-base">Stavanger, Norway resident with full work authorization</p>
+                           
                         </div>
 
                         <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-4 sm:p-6 rounded-xl shadow-md">
