@@ -41,14 +41,7 @@ function Navbar() {
             {/* Mobile Menu */}
             {menuOpen && (
                 <div className="md:hidden bg-white shadow px-6 py-4 space-y-4">
-                    <a
-                        href="#about"
-                        className="block text-gray-600 hover:bg-gradient-to-r hover:from-blue-800 hover:to-purple-600 hover:text-white px-4 py-2 rounded transition-all duration-300"
-                        onClick={toggleMenu}
-                    >
-                        About Me
-                    </a>
-
+                    <a href="#about" className="block text-gray-600 hover:text-blue-600 font-medium" onClick={toggleMenu}> About Me</a>
                     <a href="#experience" className="block text-gray-600 hover:text-blue-600 font-medium" onClick={toggleMenu}>Experience</a>
                     <a href="#projects" className="block text-gray-600 hover:text-blue-600 font-medium" onClick={toggleMenu}>Projects</a>
                     <a href="#education" className="block text-gray-600 hover:text-blue-600 font-medium" onClick={toggleMenu}>Education</a>
