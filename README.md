@@ -1,12 +1,71 @@
-# React + Vite
+# Gevindu Piyawansha — Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal developer portfolio!
+This project is built with React and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Visit the portfolio here →] https://gevindudevportfolio.netlify.app/
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Responsive Hero section with animated roles and profile image
+* Contact form with EmailJS integration
+* Smooth scrolling navigation
+* Navbar with gradient hover and improved UX
+* Dynamic chevron scroll-to-about
+* Mobile-friendly layout with optimized spacing
+* Sections scroll cleanly to top when clicked
+
+## Sections
+
+* About Me
+* Experience
+* Projects 
+* Education
+* Contact
+
+## Tech Stack
+
+* React.js
+* Tailwind CSS
+* EmailJS (for Contact form)
+* Lucide Icons
+
+## Setup Instructions
+
+1. Clone the repo:
+
+   ```bash
+   git clone https://github.com/your-username/portfolio.git
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env` file and add your EmailJS credentials:
+
+   ```
+   VITE_EMAILJS_SERVICE_ID=your_service_id
+   VITE_EMAILJS_TEMPLATE_ID=your_template_id
+   VITE_EMAILJS_PUBLIC_KEY=your_public_key
+   ```
+
+4. Run the app:
+
+   ```bash
+   npm run dev
+   ```
+
+## Recent Updates
+
+* **Navbar**: removed "Home", added strong hover effects
+* **Hero**: moved chevron below links, improved spacing on mobile and desktop
+* **Sections**: added `scroll-mt-24` for clean scroll-to-top behavior
+
+## License
+
+MIT License
