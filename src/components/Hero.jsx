@@ -54,13 +54,14 @@ function Hero() {
         <section
             id="hero"
             className="
-                w-full min-h-[80vh] 
-                bg-gradient-to-br from-slate-100 to-blue-100 
-                relative overflow-hidden 
-                pt-[200px] md:pt-[240px] 
-                pb-8 px-4 sm:px-6 lg:px-12
-            "
+        w-full min-h-[80vh] md:min-h-screen
+        bg-gradient-to-br from-slate-100 to-blue-100 
+        relative overflow-hidden 
+        pt-[200px] md:pt-[240px] 
+        pb-8 px-4 sm:px-6 lg:px-12
+    "
         >
+
             <div className="absolute inset-0 opacity-5 pointer-events-none">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(59,130,246,0.3)_1px,transparent_0)] bg-[size:50px_40px]"></div>
             </div>
@@ -77,7 +78,8 @@ function Hero() {
                 "
             >
                 {/* Left side - Text */}
-                <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left w-full md:w-1/2 space-y-6">
+                <div
+                    className="flex flex-col justify-center items-center md:items-center text-center md:text-center w-full md:w-1/2 space-y-6 -mt-6 md:mt-0 ">
                     <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-700 leading-normal">
                         Gevindu Piyawansha
                     </h1>
@@ -136,12 +138,12 @@ function Hero() {
                 </div>
 
                 {/* Right side - Photo */}
-                <div className="w-full md:w-1/2 flex justify-center items-center relative px-6 mt-8 md:mt-0">
+                <div className="w-full md:w-1/2 flex justify-center items-center relative px-6 mt-8 md:mt-0 ">
                     <img
                         src="/profile.jpg"
                         alt="Gevindu Piyawansha"
                         className="
-                            w-56 h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80
+                            w-86 h-86 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-80 lg:h-80
                             rounded-full object-cover shadow-2xl border-4 border-white
                         "
                     />
