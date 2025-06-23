@@ -4,9 +4,9 @@ import {
     SiMysql, SiPostgresql, SiSpringboot
 } from 'react-icons/si';
 
-export default function ExperienceSection() {
+export default function Experience() {
     return (
-        <section className="py-12 bg-gradient-to-br from-blue-50 to-purple-50 text-gray-800">
+        <section id="experience" className="py-12 bg-gradient-to-br from-blue-50 to-purple-50 text-gray-800">
             <h2 className="text-3xl font-bold mb-8 text-center">EXPERIENCE</h2>
 
             <div className="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto px-6">
