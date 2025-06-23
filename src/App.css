@@ -22,25 +22,7 @@ body {
   padding-right: 20px;
 }
 
-/* Section styling fills container width */
-section {
-  padding: 80px 0;
-  /* vertical padding */
-  width: 100%;
-}
 
-/* Hero Section styling */
-#hero {
-  background-color: #282c34;
-  color: white;
-  padding: 120px 0;
-  text-align: center;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-}
 
 /* Headings */
 h1,
