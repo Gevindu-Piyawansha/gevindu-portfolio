@@ -25,6 +25,20 @@ import {
 
 const softwareExperiences = [
   {
+    title: "Aspiring Full Stack Developer (Self-Initiated Projects)",
+    company: "Independent / Personal Projects",
+    location: "Stavanger/Sandnes, Rogaland, Norway",
+    duration: "Nov 2024 - Present",
+    project: "Remote - Freelance",
+    responsibilities: [
+      "Architecting front-end interfaces using React, TypeScript, Tailwind CSS, and Material-UI for responsive, intuitive UIs",
+      "Building back-end services with Spring Boot, .NET 8, JWT authentication, MySQL, and Firebase for secure data management and APIs",
+      "Implementing full-stack integrations, including state management (Redux), routing (React Router), and resource optimization",
+      "Collaborating on project planning, from ideation to deployment on platforms like Vercel and Netlify",
+      "Delivered enterprise-level applications with real-time tracking, secure APIs, and responsive designs",
+    ],
+  },
+  {
     title: "Comprehensive Master Java Developer (Training)",
     company: "Institute of Software Engineering (IJSE)",
     location: "Sri Lanka",
@@ -147,7 +161,7 @@ export default function Experience() {
         Experience
       </h2>
       <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-        My professional journey in Software Development and Civil Engineering
+        My journey in Software Development and Civil Engineering
       </p>
 
       {/* Tab Navigation */}
