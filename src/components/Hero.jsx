@@ -10,9 +10,8 @@ import {
 import { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 
-function Hero() {
+function Hero({ isContactModalOpen, setIsContactModalOpen }) {
   const [currentRole, setCurrentRole] = useState(0);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
@@ -131,7 +130,7 @@ function Hero() {
           "Message sent successfully! I'll get back to you soon.",
           "success"
         );
-        setIsModalOpen(false);
+        setIsContactModalOpen(false);
         setName("");
         setEmail("");
         setMessage("");
@@ -148,10 +147,10 @@ function Hero() {
 
   const handleDownloadResume = () => {
     // Replace with your actual resume URL
-    const resumeUrl = "/resume.pdf";
+    const resumeUrl = "/CV_PDGC Piyawansha_Eng.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "Gevindu_Piyawansha_Resume.pdf";
+    link.download = "CV_PDGC Piyawansha_Eng.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -263,7 +262,7 @@ function Hero() {
 
             {/* Contact Me Button */}
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={() => setIsContactModalOpen(true)}
               className="
                                 px-6 sm:px-8 py-3 rounded-full 
                                 border-2 border-blue-600 text-blue-600 font-semibold
@@ -339,11 +338,11 @@ function Hero() {
       </div>
 
       {/* Modal */}
-      {isModalOpen && (
+      {isContactModalOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4 animate-fadeIn">
           <div className="bg-white p-6 rounded-lg shadow-2xl w-full max-w-md relative animate-slideUp">
             <button
-              onClick={() => setIsModalOpen(false)}
+              onClick={() => setIsContactModalOpen(false)}
               className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
               aria-label="Close modal"
             >
@@ -419,7 +418,7 @@ function Hero() {
               <div className="flex justify-end gap-2 pt-2">
                 <button
                   type="button"
-                  onClick={() => setIsModalOpen(false)}
+                  onClick={() => setIsContactModalOpen(false)}
                   className="px-4 py-2 bg-gray-300 text-gray-700 rounded hover:bg-gray-400 transition-colors"
                 >
                   Cancel
