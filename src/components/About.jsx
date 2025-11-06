@@ -39,10 +39,7 @@ function About() {
                 unique background. I've managed full-lifecycle projects valued
                 up to 48M NOK in construction management, structural design, and
                 QA/QC across Sri Lanka and Latvia, and have developed/developing
-                full-stack software applications including an International
-                Students Latvia marketplace platform, Construction Project
-                Manager system, Auto Wheel automotive platform, and Lost & Found
-                application with Spring Boot backend.
+                full-stack software applications.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
                 A result-driven and proactive team player who enjoys integrating
