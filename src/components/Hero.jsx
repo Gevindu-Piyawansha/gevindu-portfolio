@@ -27,16 +27,16 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
   const roles = [
     "Full-Stack Developer",
     "Adaptable Civil Engineer",
-    "Problem Solver",
-    "Team Collaborator",
     "Continuous Learner",
+    "Problem Solver",
+    "Team Player",
   ];
 
   const rolesWithoutAspiring = [
     "Adaptable Civil Engineer",
-    "Problem Solver",
-    "Team Collaborator",
     "Continuous Learner",
+    "Problem Solver",
+    "Team Player",
   ];
 
   const stats = [
