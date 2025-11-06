@@ -244,12 +244,12 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
             <button
               onClick={() =>
                 document
-                  .getElementById("projects")
+                  .getElementById("experience")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
               className="px-6 sm:px-8 py-3 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 shadow-md"
             >
-              View My Work
+              View My Experience
             </button>
 
             <button
