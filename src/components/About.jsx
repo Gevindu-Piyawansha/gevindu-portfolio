@@ -41,8 +41,8 @@ function About() {
                 Lanka and Latvia.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I've worked on major residential and building developments like Canterbury Residencies and Iconic Galaxy High rise building, Sri Lanka and SIA Dream Property Managrment, Latvia.
-                Also wastewater & Water treatment & design infrastructures like National Water Supply and Drainage Board, Sri Lanka. I'm also learning to build full-stack applications
+                I've worked on major residential and building developments like Canterbury Residencies and Iconic Galaxy High rise building, Sri Lanka and SIA Dream Property Management, Latvia.
+                Also Water & wastewater treatment & design infrastructures like National Water Supply and Drainage Board, Sri Lanka. I'm also learning to build full-stack applications
                 like a car marketplace for importer, construction project
                 management system for project tracking, a student community/marketplace platform for international students in Latvia. Each experience
                 helping me grow while exploring how engineering and technology
