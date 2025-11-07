@@ -49,7 +49,7 @@ function About() {
                 can solve real-world problems.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
-                Currently studying Norwegian at the University of Stavanger with
+                I'm Currently studying Norwegian at the University of Stavanger and working on part time works with
                 full-time work rights in Norway. I'm eager to apply engineering
                 insight and software skills to contribute to projects that
                 create real, sustainable value for people and communities.
