@@ -41,13 +41,13 @@ function About() {
                 Lanka and Latvia.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I've been learning to build full-stack applications like a
-                construction project management system, a student community
-                platform with real-time messaging, and a vehicle marketplace. On
-                the civil engineering side, I've worked on major residential and
-                Building developments and wastewater treatment infrastructures.
-                Each experience helping me grow while exploring how technology
-                and engineering can solve real-world problems.
+                I've worked on major residential and building developments,
+                wastewater treatment infrastructures, and site engineering
+                projects. I'm also learning to build full-stack applications
+                like a car marketplace for importer, construction project
+                management system, a student community platform. Each experience
+                helping me grow while exploring how engineering and technology
+                can solve real-world problems.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
                 Currently studying Norwegian at the University of Stavanger with
