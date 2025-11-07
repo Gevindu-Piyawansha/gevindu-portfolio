@@ -155,7 +155,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-16 bg-gradient-to-br from-blue-50 to-purple-50 text-gray-800"
+      className="py-10 bg-gradient-to-br from-blue-50 to-purple-50 text-gray-800"
     >
       <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
         Experience
@@ -192,9 +192,9 @@ export default function Experience() {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto px-6">
+      <div className="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto px-6">
         {/* Skill Icons - Show for both tabs */}
-        <div className="grid grid-cols-4 gap-6 justify-items-center w-full md:w-1/2">
+        <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center w-full lg:w-2/5">
           {activeTab === "software"
             ? // Software Development Tools
               [
@@ -225,12 +225,14 @@ export default function Experience() {
               ].map(({ icon: Icon, color, label }) => (
                 <div
                   key={label}
-                  className="flex flex-col items-center space-y-2"
+                  className="flex flex-col items-center justify-center space-y-1 p-1"
                 >
                   <Icon
-                    className={`text-5xl ${color} hover:scale-110 transition-transform`}
+                    className={`text-3xl sm:text-4xl ${color} hover:scale-110 transition-transform duration-200`}
                   />
-                  <span className="text-center text-sm">{label}</span>
+                  <span className="text-center text-[10px] sm:text-xs font-medium">
+                    {label}
+                  </span>
                 </div>
               ))
             : // Civil Engineering Tools
@@ -274,47 +276,52 @@ export default function Experience() {
               ].map(({ icon: Icon, color, label }, idx) => (
                 <div
                   key={`${label}-${idx}`}
-                  className="flex flex-col items-center space-y-2"
+                  className="flex flex-col items-center justify-center space-y-2 p-2"
                 >
                   <Icon
-                    className={`text-5xl ${color} hover:scale-110 transition-transform`}
+                    className={`text-4xl sm:text-5xl ${color} hover:scale-110 transition-transform duration-200`}
                   />
-                  <span className="text-center text-sm">{label}</span>
+                  <span className="text-center text-xs sm:text-sm font-medium">
+                    {label}
+                  </span>
                 </div>
               ))}
         </div>
 
         {/* Experience Timeline */}
-        <div
-          className={`bg-white p-6 sm:p-8 rounded-2xl shadow-xl flex flex-col space-y-6 ${
-            activeTab === "software" ? "max-w-md w-full md:ml-auto" : "w-full"
-          }`}
-        >
+        <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col space-y-6 w-full lg:w-3/5">
           {experiences.map((exp, index) => (
             <div key={index}>
               {index > 0 && (
-                <div className="border-t border-blue-100 mb-6"></div>
+                <div className="border-t border-blue-100 mb-6 pt-4"></div>
               )}
               <div>
-                <h3 className="text-xl font-semibold text-blue-700 mb-1">
+                <h3 className="text-lg sm:text-xl font-bold text-blue-700 mb-2">
                   {exp.title}
                 </h3>
-                <p className="text-sm font-medium text-gray-600">
+                <p className="text-sm sm:text-sm font-semibold text-gray-700 mb-1">
                   {exp.company}
                 </p>
-                <div className="flex flex-wrap gap-3 text-xs text-gray-500 mt-1">
-                  <span>📍 {exp.location}</span>
-                  <span>📅 {exp.duration}</span>
+                <div className="flex flex-wrap gap-3 text-xs sm:text-sm text-gray-500 mt-2 mb-3">
+                  <span className="flex items-center gap-1">
+                    📍 {exp.location}
+                  </span>
+                  <span className="flex items-center gap-1">
+                    📅 {exp.duration}
+                  </span>
                 </div>
                 {exp.project && (
-                  <p className="text-xs text-purple-600 font-semibold mt-2">
+                  <p className="text-xs sm:text-sm text-purple-600 font-semibold mt-3 mb-2 bg-purple-50 px-2 py-0.5 rounded-lg inline-block">
                     {exp.project}
                   </p>
                 )}
-                <ul className="mt-3 space-y-2 text-gray-700 text-sm">
+                <ul className="mt-3 space-y-2 text-gray-700 text-sm sm:text-sm">
                   {exp.responsibilities.map((resp, idx) => (
-                    <li key={idx} className="flex items-start gap-2">
-                      <span className="text-blue-500 mt-0.5">•</span>
+                    <li
+                      key={idx}
+                      className="flex items-start gap-3 leading-normal"
+                    >
+                      <span className="text-blue-500 mt-1 text-base">•</span>
                       <span>{resp}</span>
                     </li>
                   ))}

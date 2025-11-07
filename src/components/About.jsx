@@ -32,25 +32,26 @@ function About() {
             <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-6 sm:p-8 rounded-2xl shadow-lg">
               <User className="w-8 h-8 text-blue-600 mb-4" />
               <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
-                Professional Journey
+                Journey
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I'm a Civil Engineer and Aspiring Full-Stack Developer with a
-                unique background. I've managed full-lifecycle projects valued
-                up to 48M NOK in construction management, structural design, and
-                QA/QC across Sri Lanka and Latvia, and have developed/developing
-                full-stack software applications.
+                I'm a Civil Engineer and Aspiring Full-Stack Developer who has
+                managed full-lifecycle projects valued up to 48M NOK in
+                construction management, structural design, and QA/QC across Sri
+                Lanka and Latvia.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                A result-driven and proactive team player who enjoys integrating
-                engineering knowledge with technology to make work more
-                efficient and accurate. Skilled in digital and full-stack
-                development for tech-driven engineering solutions using Java,
-                React, and the MERN stack.
+                I've been learning to build full-stack applications like a
+                construction project management system, a student community
+                platform with real-time messaging, and a vehicle marketplace. On
+                the civil engineering side, I've worked on major residential and
+                Building developments and wastewater treatment infrastructures.
+                Each experience helping me grow while exploring how technology
+                and engineering can solve real-world problems.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
                 Currently studying Norwegian at the University of Stavanger with
-                full-time work rights in Norway. Ready to apply engineering
+                full-time work rights in Norway. I'm eager to apply engineering
                 insight and software skills to contribute to projects that
                 create real, sustainable value for people and communities.
               </p>
