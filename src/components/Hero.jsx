@@ -7,7 +7,7 @@ import {
   CheckCircle,
   X,
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import emailjs from "emailjs-com";
 
 function Hero({ isContactModalOpen, setIsContactModalOpen }) {
@@ -18,6 +18,8 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [toastType, setToastType] = useState("success");
+  const [showResumeOptions, setShowResumeOptions] = useState(false);
+  const resumeDropdownRef = useRef(null);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -73,6 +75,21 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }
   }, [charIndex, isDeleting, currentRole, roles, rolesWithoutAspiring]);
+
+  // Click outside to close resume dropdown
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (
+        resumeDropdownRef.current &&
+        !resumeDropdownRef.current.contains(event.target)
+      ) {
+        setShowResumeOptions(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   // Form validation
   const validateForm = () => {
@@ -145,15 +162,24 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
       });
   };
 
-  const handleDownloadResume = () => {
-    // Replace with your actual resume URL
-    const resumeUrl = "/CV_PDGC Piyawansha_Eng.pdf";
+  const handleDownloadResume = (type) => {
+    const resumeUrl =
+      type === "engineering"
+        ? "/CV_PDGC Piyawansha_Eng.pdf"
+        : "/CV_PDGC Piyawansha_Dev.pdf";
+
+    const fileName =
+      type === "engineering"
+        ? "CV_PDGC_Piyawansha_Eng.pdf"
+        : "CV_PDGC_Piyawansha_De.pdf";
+
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "CV_PDGC Piyawansha_Eng.pdf";
+    link.download = fileName;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+    setShowResumeOptions(false);
   };
 
   return (
@@ -252,13 +278,39 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
               View My Experience
             </button>
 
-            <button
-              onClick={handleDownloadResume}
-              className="px-6 sm:px-8 py-3 rounded-full border-2 border-purple-600 text-purple-600 font-semibold bg-white hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-sm flex items-center justify-center gap-2"
-            >
-              <Download className="w-4 h-4" />
-              Download Resume
-            </button>
+            <div className="relative" ref={resumeDropdownRef}>
+              <button
+                onClick={() => setShowResumeOptions(!showResumeOptions)}
+                className="px-6 sm:px-8 py-3 rounded-full border-2 border-purple-600 text-purple-600 font-semibold bg-white hover:bg-purple-600 hover:text-white transition-all duration-300 shadow-sm flex items-center justify-center gap-2 w-full"
+              >
+                <Download className="w-4 h-4" />
+                Download Resume
+              </button>
+
+              {/* Resume Options Dropdown */}
+              {showResumeOptions && (
+                <div className="absolute top-full mt-2 left-0 right-0 bg-white rounded-lg shadow-xl border border-gray-200 overflow-hidden z-10 animate-slideDown">
+                  <button
+                    onClick={() => handleDownloadResume("engineering")}
+                    className="w-full px-6 py-3 text-left hover:bg-blue-50 transition-colors border-b border-gray-100 flex items-center gap-2"
+                  >
+                    <Download className="w-4 h-4 text-blue-600" />
+                    <span className="font-medium text-gray-700">
+                      Engineering CV
+                    </span>
+                  </button>
+                  <button
+                    onClick={() => handleDownloadResume("developer")}
+                    className="w-full px-6 py-3 text-left hover:bg-purple-50 transition-colors flex items-center gap-2"
+                  >
+                    <Download className="w-4 h-4 text-purple-600" />
+                    <span className="font-medium text-gray-700">
+                      Developer CV
+                    </span>
+                  </button>
+                </div>
+              )}
+            </div>
 
             {/* Contact Me Button */}
             <button

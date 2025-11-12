@@ -41,18 +41,24 @@ function About() {
                 Lanka and Latvia.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I've worked on major residential and building developments like Canterbury Residencies and Iconic Galaxy High rise building, Sri Lanka and SIA Dream Property Management, Latvia.
-                Also Water & wastewater treatment & design infrastructures like National Water Supply and Drainage Board, Sri Lanka. I'm also learning to build full-stack applications
-                like a car marketplace for importer, construction project
-                management system for project tracking, a student community/marketplace platform for international students. Each experience
-                helping me grow while exploring how engineering and technology
-                can solve real-world problems.
+                I've worked on major residential and building developments like
+                Canterbury Residencies and Iconic Galaxy High rise building, Sri
+                Lanka and SIA Dream Property Management, Latvia. Also Water &
+                wastewater treatment & design infrastructures like National
+                Water Supply and Drainage Board, Sri Lanka. I'm also learning to
+                build full-stack applications like a car marketplace for
+                importer, construction project management system for project
+                tracking, a student community/marketplace platform for
+                international students. Each experience helping me grow while
+                exploring how engineering and technology can solve real-world
+                problems.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
-                I'm Currently studying Norwegian at the University of Stavanger and working on part time works with
-                full-time work rights in Norway. I'm eager to apply engineering
-                insight and software skills to contribute to projects that
-                create real, sustainable value for people and communities.
+                I'm Currently studying Norwegian at the University of Stavanger
+                and working on part time works with full-time work rights in
+                Norway. I'm eager to apply engineering insight and software
+                skills to contribute to projects that create real, sustainable
+                value for people and communities.
               </p>
             </div>
           </div>
