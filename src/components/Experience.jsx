@@ -38,18 +38,7 @@ const softwareExperiences = [
       "Delivered enterprise-level applications with real-time tracking, secure APIs, and responsive designs",
     ],
   },
-  {
-    title: "Comprehensive Master Java Developer (Training)",
-    company: "Institute of Software Engineering (IJSE)",
-    location: "Sri Lanka",
-    duration: "Nov 2024 - Jun 2025",
-    responsibilities: [
-      "Professional software engineering principles and practices",
-      "Java and object-oriented programming",
-      "Design patterns (MVC, Singleton, DAO, Factory, etc.)",
-      "Database and network programming aligned with industry standards",
-    ],
-  },
+
   {
     title: "MERN Industrial Expert Masterclass (Training)",
     company: "IDET - Institute of Digital Engineering Technology",
@@ -61,6 +50,29 @@ const softwareExperiences = [
       "MERN stack (MongoDB, Express.js, React, Node.js)",
       "Modern, industry-standard practices",
       "Full-stack development with React and Node.js",
+    ],
+  },
+  {
+    title:
+      "DevOps / TechOps (Infrastructure-Operations) Industrial Expert Masterclass",
+    company: "IDET - Institute of Digital Engineering Technology",
+    location: "Sri Lanka",
+    duration: "30 hours",
+    responsibilities: [
+      "Managing Linux infrastructure, automating workflows with DevOps tools(Jenkins, Ansible, etc.), and deploying containerized applications using Docker and Kubernetes",
+    ],
+  },
+
+  {
+    title: "Comprehensive Master Java Developer (Training)",
+    company: "Institute of Software Engineering (IJSE)",
+    location: "Sri Lanka",
+    duration: "Nov 2024 - Jun 2025",
+    responsibilities: [
+      "Professional software engineering principles and practices",
+      "Java and object-oriented programming",
+      "Design patterns (MVC, Singleton, DAO, Factory, etc.)",
+      "Database and network programming aligned with industry standards",
     ],
   },
 ];

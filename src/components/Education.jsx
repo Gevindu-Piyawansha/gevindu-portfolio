@@ -99,6 +99,18 @@ function Education() {
       description:
         "Skilled in infrastructure and operations management with hands-on experience in Linux administration, shell scripting, DevOps tools (Jenkins, Ansible, Grafana), and containerization using Docker and Kubernetes.",
     },
+    {
+      title: "Introduction to Programming with C#",
+      institution: "Microsoft",
+      period: "Completed",
+      duration: "30 hours",
+      location: "Online",
+      icon: BookOpen,
+      gradient: "from-purple-500 to-violet-600",
+      bgGradient: "from-purple-50 to-violet-50",
+      description:
+        "Gained practical experience in C#, .NET Framework, using Microsoft Visual Studio, debugging, and applying programming concepts to build efficient, structured code.",
+    },
   ];
 
   const certifications = [
@@ -175,7 +187,7 @@ function Education() {
         {/* Courses Section */}
         <div className="text-center mb-12 mt-20">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-            Professional Courses
+            Courses
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-orange-600 to-red-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
@@ -228,7 +240,7 @@ function Education() {
         {/* Certifications Section */}
         <div className="text-center mb-12 mt-20">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-            Professional Certifications
+            Certifications
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
