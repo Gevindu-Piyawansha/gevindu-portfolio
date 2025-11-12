@@ -19,6 +19,7 @@ const softwareProjects = [
     links: {
       github:
         "https://github.com/Gevindu-Piyawansha/construction-project-manager",
+      live: "https://construction-project-manager.vercel.app/",
     },
     highlights: [
       "Project Tracking",
@@ -45,6 +46,7 @@ const softwareProjects = [
     links: {
       github:
         "https://github.com/Gevindu-Piyawansha/international-students-latvia",
+      live: "https://international-students-latvia.web.app/",
     },
     highlights: [
       "Apartment Listings",
@@ -63,6 +65,7 @@ const softwareProjects = [
     technologies: ["JavaScript", "React", "REST API", "Database Management"],
     links: {
       github: "https://github.com/Gevindu-Piyawansha/Auto-Wheel",
+      live: "https://auto-wheel-sl.web.app/",
     },
     highlights: [
       "Vehicle Listings",
@@ -81,6 +84,7 @@ const softwareProjects = [
     technologies: ["JavaScript", "React", "Tailwind CSS", "Vite", "EmailJS"],
     links: {
       github: "https://github.com/Gevindu-Piyawansha/gevindu-portfolio",
+      live: "https://gevindudevportfolio.netlify.app/",
     },
     highlights: [
       "Responsive Design",
