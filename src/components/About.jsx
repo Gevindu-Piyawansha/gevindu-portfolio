@@ -35,30 +35,30 @@ function About() {
                 Journey
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I'm a Civil Engineer and Aspiring Full-Stack Developer who has
-                managed full-lifecycle projects valued up to 48M NOK in
-                construction management, structural design, and QA/QC across Sri
-                Lanka and Latvia.
+                Experienced Civil Engineer and BIM-Modeler with 4+ years on
+                construction projects in Sri Lanka and Latvia. MSc in Civil
+                Construction Management, BSc in Civil Engineering with
+                Structural Design. Skilled in managing projects to meet
+                technical, quality, and safety standards, and enhancing project
+                efficiency through BIM workflows, drawing reviews, and design
+                coordination.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I've worked on major residential and building developments like
-                Canterbury Residencies and Iconic Galaxy High rise building, Sri
-                Lanka and SIA Dream Property Management, Latvia. Also Water &
-                wastewater treatment & design infrastructures like National
-                Water Supply and Drainage Board, Sri Lanka. I'm also learning to
-                build full-stack applications like a car marketplace for
-                importer, construction project management system for project
-                tracking, a student community/marketplace platform for
-                international students. Each experience helping me grow while
-                exploring how engineering and technology can solve real-world
-                problems.
+                My background includes site engineering, technical coordination,
+                and digital construction management for major residential,
+                high-rise, and infrastructure projects. Proficient in Revit,
+                Navisworks, AutoCAD, Civil 3D, QGIS, and SCADA systems. I
+                develop BIM models and digital workflows to optimize
+                construction efficiency and support project delivery.
               </p>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
-                I'm Currently studying Norwegian at the University of Stavanger
-                and working on part time works with full-time work rights in
-                Norway. I'm eager to apply engineering insight and software
-                skills to contribute to projects that create real, sustainable
-                value for people and communities.
+                I am currently based in Stavanger, Norway, working part-time
+                while studying Norwegian at the University of Stavanger. I am
+                reliable, proactive, and a fast learner, eager to contribute
+                engineering and BIM expertise to projects that create real,
+                sustainable value. Software development (Java, C#, MERN) is a
+                supporting skill I use to enhance digital workflows and project
+                management.
               </p>
             </div>
           </div>
@@ -72,6 +72,39 @@ function About() {
               </h4>
               <p className="text-gray-700 text-sm sm:text-base">
                 Stavanger, Norway resident with full work authorization
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-green-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <Lightbulb className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mb-3" />
+              <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
+                Technical Skills
+              </h4>
+              <p className="text-gray-700 text-sm sm:text-base">
+                Construction Management, QA/QC, BIM (Revit, Navisworks, Civil
+                3D), AutoCAD, SCADA, QGIS, Microsoft Office, SAP2000, SolidWorks
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <Target className="w-5 h-5 sm:w-6 sm:h-6 text-purple-600 mb-3" />
+              <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
+                Leadership & Volunteering
+              </h4>
+              <p className="text-gray-700 text-sm sm:text-base">
+                Batch Representative (UEL), Student Coordinator (ITUM), ATHWELA
+                Charity Project, ASANI Fundraising Initiative
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-50 to-amber-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+              <BadgeCheck className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-600 mb-3" />
+              <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
+                Certifications
+              </h4>
+              <p className="text-gray-700 text-sm sm:text-base">
+                Associate Member, IIESL (AM 6355); Registered Member, ECSL
+                (501812)
               </p>
             </div>
 

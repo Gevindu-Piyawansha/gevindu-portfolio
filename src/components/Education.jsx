@@ -20,19 +20,7 @@ function Education() {
       gradient: "from-green-500 to-blue-600",
       bgGradient: "from-green-50 to-blue-50",
       description:
-        "Final GPA: 8.46/10. Experienced in civil construction project planning, real estate development, and asset management, with expertise aligned to European professional standards (FIABCI, CEPI).",
-    },
-    {
-      title: "Diploma - Comprehensive Master Java Developer",
-      institution: "Institute of Software Engineering (IJSE)",
-      period: "Nov 2024 - Jun 2025",
-      location: "Sri Lanka",
-      type: "Professional Diploma",
-      icon: Award,
-      gradient: "from-blue-500 to-purple-600",
-      bgGradient: "from-blue-50 to-purple-50",
-      description:
-        "Trained in professional software engineering principles with strong foundations in Java, object-oriented programming, design patterns (MVC, Singleton, DAO, Factory), and database/network programming.",
+        "Final GPA: 8.46/10. Focused on construction planning, project management, and digital construction workflows. Experienced in BIM, real estate development, and asset management, with expertise aligned to European professional standards (FIABCI, CEPI).",
     },
     {
       title: "Sustainable Mobility Program (Erasmus+ Scholarship)",
@@ -75,16 +63,16 @@ function Education() {
 
   const courses = [
     {
-      title: "MERN Industrial Expert Masterclass",
-      institution: "IDET - Institute of Digital Engineering Technology",
-      period: "Oct 2025 - Present",
-      duration: "100 hours",
-      location: "Sri Lanka",
+      title: "BIM & Digital Construction Workflows",
+      institution: "Self-Directed / Industry Practice",
+      period: "Ongoing",
+      duration: "Practical Experience",
+      location: "Sri Lanka, Latvia, Norway",
       icon: BookOpen,
-      gradient: "from-indigo-500 to-blue-600",
-      bgGradient: "from-indigo-50 to-blue-50",
+      gradient: "from-blue-500 to-green-600",
+      bgGradient: "from-blue-50 to-green-50",
       description:
-        "Proficient in developing and deploying full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js) with modern, industry-standard practices.",
+        "Experience in BIM modeling, drawing reviews, design coordination, and digital workflows using Revit, Navisworks, Civil 3D, and SCADA systems to optimize construction efficiency.",
     },
     {
       title:

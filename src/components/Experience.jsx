@@ -25,17 +25,15 @@ import {
 
 const softwareExperiences = [
   {
-    title: "Aspiring Full Stack Developer (Self-Initiated Projects)",
+    title: "Software Development (Supporting Skill)",
     company: "Independent / Personal Projects",
     location: "Stavanger/Sandnes, Rogaland, Norway",
     duration: "Nov 2024 - Present",
     project: "Remote - Freelance",
     responsibilities: [
-      "Architecting front-end interfaces using React, TypeScript, Tailwind CSS, and Material-UI for responsive, intuitive UIs",
-      "Building back-end services with Spring Boot, .NET 8, JWT authentication, MySQL, and Firebase for secure data management and APIs",
-      "Implementing full-stack integrations, including state management (Redux), routing (React Router), and resource optimization",
-      "Collaborating on project planning, from ideation to deployment on platforms like Vercel and Netlify",
-      "Delivered enterprise-level applications with real-time tracking, secure APIs, and responsive designs",
+      "Knowledgeable in software development (Java, C#, MERN) for digital workflows and project management.",
+      "Built full stack applications to organize data and simplify project management.",
+      "Software is used to enhance BIM and construction efficiency, not as a primary focus.",
     ],
   },
 
@@ -159,10 +157,10 @@ const civilExperiences = [
 ];
 
 export default function Experience() {
-  const [activeTab, setActiveTab] = useState("software");
+  const [activeTab, setActiveTab] = useState("civil");
 
   const experiences =
-    activeTab === "software" ? softwareExperiences : civilExperiences;
+    activeTab === "civil" ? civilExperiences : softwareExperiences;
 
   return (
     <section
@@ -207,9 +205,67 @@ export default function Experience() {
       <div className="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto px-6">
         {/* Skill Icons - Show for both tabs */}
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center w-full lg:w-2/5">
-          {activeTab === "software"
-            ? // Software Development Tools
-              [
+          {activeTab === "civil"
+            ? [
+                { icon: SiAutodesk, color: "text-red-600", label: "AutoCAD" },
+                { icon: MapPin, color: "text-green-600", label: "QGIS" },
+                { icon: Ruler, color: "text-blue-600", label: "SewerGEM" },
+                {
+                  icon: HardHat,
+                  color: "text-orange-600",
+                  label: "Site Management",
+                },
+                {
+                  icon: ClipboardCheck,
+                  color: "text-purple-600",
+                  label: "Quality Control",
+                },
+                { icon: FileText, color: "text-indigo-600", label: "BOQ" },
+                {
+                  icon: Calculator,
+                  color: "text-cyan-600",
+                  label: "Structural Analysis",
+                },
+                { icon: Sheet, color: "text-green-700", label: "MS Excel" },
+                {
+                  icon: Building2,
+                  color: "text-gray-700",
+                  label: "Construction",
+                },
+                { icon: MapPin, color: "text-blue-500", label: "Surveying" },
+                { icon: HardHat, color: "text-yellow-600", label: "Safety" },
+                {
+                  icon: FileText,
+                  color: "text-red-500",
+                  label: "Documentation",
+                },
+                // BIM and Digital Construction
+                { icon: SiAutodesk, color: "text-blue-600", label: "Revit" },
+                {
+                  icon: SiAutodesk,
+                  color: "text-green-600",
+                  label: "Navisworks",
+                },
+                {
+                  icon: SiAutodesk,
+                  color: "text-purple-600",
+                  label: "Civil 3D",
+                },
+                { icon: Sheet, color: "text-pink-600", label: "SCADA" },
+              ].map(({ icon: Icon, color, label }, idx) => (
+                <div
+                  key={`${label}-${idx}`}
+                  className="flex flex-col items-center justify-center space-y-2 p-2"
+                >
+                  <Icon
+                    className={`text-4xl sm:text-5xl ${color} hover:scale-110 transition-transform duration-200`}
+                  />
+                  <span className="text-center text-xs sm:text-sm font-medium">
+                    {label}
+                  </span>
+                </div>
+              ))
+            : [
                 { icon: FaJava, color: "text-yellow-500", label: "Java" },
                 { icon: FaJs, color: "text-yellow-400", label: "JavaScript" },
                 {
@@ -243,57 +299,6 @@ export default function Experience() {
                     className={`text-3xl sm:text-4xl ${color} hover:scale-110 transition-transform duration-200`}
                   />
                   <span className="text-center text-[10px] sm:text-xs font-medium">
-                    {label}
-                  </span>
-                </div>
-              ))
-            : // Civil Engineering Tools
-              [
-                { icon: SiAutodesk, color: "text-red-600", label: "AutoCAD" },
-                { icon: MapPin, color: "text-green-600", label: "QGIS" },
-                { icon: Ruler, color: "text-blue-600", label: "SewerGEM" },
-                {
-                  icon: HardHat,
-                  color: "text-orange-600",
-                  label: "Site Management",
-                },
-                {
-                  icon: ClipboardCheck,
-                  color: "text-purple-600",
-                  label: "Quality Control",
-                },
-                { icon: FileText, color: "text-indigo-600", label: "BOQ" },
-                {
-                  icon: Calculator,
-                  color: "text-cyan-600",
-                  label: "Structural Analysis",
-                },
-                {
-                  icon: Sheet,
-                  color: "text-green-700",
-                  label: "MS Excel",
-                },
-                {
-                  icon: Building2,
-                  color: "text-gray-700",
-                  label: "Construction",
-                },
-                { icon: MapPin, color: "text-blue-500", label: "Surveying" },
-                { icon: HardHat, color: "text-yellow-600", label: "Safety" },
-                {
-                  icon: FileText,
-                  color: "text-red-500",
-                  label: "Documentation",
-                },
-              ].map(({ icon: Icon, color, label }, idx) => (
-                <div
-                  key={`${label}-${idx}`}
-                  className="flex flex-col items-center justify-center space-y-2 p-2"
-                >
-                  <Icon
-                    className={`text-4xl sm:text-5xl ${color} hover:scale-110 transition-transform duration-200`}
-                  />
-                  <span className="text-center text-xs sm:text-sm font-medium">
                     {label}
                   </span>
                 </div>
