@@ -162,16 +162,16 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
       });
   };
 
-  const handleDownloadResume = (type) => {
-    const resumeUrl =
-      type === "engineering"
-        ? "/CV_PDGC Piyawansha_Eng.pdf"
-        : "/CV_PDGC Piyawansha_Dev.pdf";
+  // const handleDownloadResume = (type) => {
+  //   const resumeUrl =
+  //     type === "engineering"
+  //       ? "/CV_PDGC Piyawansha_Eng.pdf"
+  //       : "/CV_PDGC Piyawansha_Dev.pdf";
 
-    const fileName =
-      type === "engineering"
-        ? "CV_PDGC_Piyawansha_Eng.pdf"
-        : "CV_PDGC_Piyawansha_De.pdf";
+  //   const fileName =
+  //     type === "engineering"
+  //       ? "CV_PDGC_Piyawansha_Eng.pdf"
+  //       : "CV_PDGC_Piyawansha_De.pdf";
 
     const link = document.createElement("a");
     link.href = resumeUrl;
