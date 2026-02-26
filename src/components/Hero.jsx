@@ -173,14 +173,14 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
   //       ? "CV_PDGC_Piyawansha_Eng.pdf"
   //       : "CV_PDGC_Piyawansha_De.pdf";
 
-    const link = document.createElement("a");
-    link.href = resumeUrl;
-    link.download = fileName;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setShowResumeOptions(false);
-  };
+  //   const link = document.createElement("a");
+  //   link.href = resumeUrl;
+  //   link.download = fileName;
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  //   setShowResumeOptions(false);
+  // };
 
   return (
     <section
