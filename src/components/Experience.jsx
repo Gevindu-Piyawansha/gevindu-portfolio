@@ -67,7 +67,7 @@ const bimExperiences = [
     ],
   },
   {
-    title: "Trainee Civil Engineer (3D Documentation)",
+    title: "Trainee Civil Engineer (Diploma Program)",
     company: "MAGA Engineering Pvt Ltd",
     location: "Kotte, Sri Lanka",
     duration: "Feb 2019 – Aug 2019",
