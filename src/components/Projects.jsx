@@ -2,191 +2,65 @@ import {
   Github,
   ExternalLink,
   Star,
-  Building2,
   Layers,
 } from "lucide-react";
-import { useState } from "react";
 
-const bimProjects = [
+const projects = [
   {
     title: "BIM Development Projects",
     subtitle: "Revit · Navisworks · Dynamo · Inventor",
     description:
-      "Ongoing self-initiated BIM practice developing coordinated 3D models, Dynamo automation scripts, and digital workflows aligned with ISO 19650 standards. Includes architectural, structural, and MEP modelling exercises.",
+      "Ongoing self-initiated BIM practice developing coordinated 3D models, Dynamo automation scripts, and digital workflows aligned with ISO 19650 standards. Covers architectural, structural, and MEP modelling exercises across residential and infrastructure typologies.",
     technologies: ["Autodesk Revit", "Navisworks", "Dynamo", "Inventor", "ISO 19650"],
     links: {},
     highlights: [
       "3D Multi-discipline Modelling",
-      "Dynamo Scripting",
-      "ISO 19650 Workflows",
-      "Clash Detection",
+      "Dynamo Scripting & Automation",
+      "ISO 19650 Information Workflows",
+      "Clash Detection Practice",
     ],
     status: "In Progress",
-    featured: true,
     duration: "2025 – Present",
   },
   {
-    title: "Canterbury Residencies – BIM Coordination",
-    subtitle: "Revit · RFI Management · Multi-discipline Coordination",
+    title: "SCADA Digital Twin – Wastewater Treatment",
+    subtitle: "Master's Thesis · Riga Technical University",
     description:
-      "Delivered BIM coordination for a 137-unit residential project (1.4B LKR / ~48M NOK). Updated Revit models, managed RFIs across structural, MEP, and architectural teams, and maintained the BIM Execution Plan — reducing design revisions by ~15%.",
-    technologies: ["Autodesk Revit", "AutoCAD", "RFI Management", "BIM Execution Plan", "QA/QC"],
+      "Developed a real-time monitoring and digital twin concept for municipal wastewater treatment plants. Integrates SCADA sensor data with BIM asset models for predictive maintenance, process optimisation, and operational cost reduction.",
+    technologies: ["SCADA Systems", "IoT Sensors", "Digital Twin", "BIM", "Data Analytics", "Process Control"],
     links: {},
     highlights: [
-      "~15% Revision Reduction",
-      "Multi-discipline Coordination",
-      "RFI Management",
-      "BIM Execution Plan",
+      "Digital Twin Integration",
+      "Real-time Sensor Monitoring",
+      "Predictive Maintenance Model",
+      "Process Optimisation",
     ],
     status: "Completed",
-    featured: true,
-    location: "Sri Lanka",
-    duration: "2021 – 2022",
-    company: "Homelands Skyline (Pvt) Ltd",
-  },
-  {
-    title: "Ratmalana/Moratuwa Wastewater Network",
-    subtitle: "AutoCAD · QGIS · SewerGEMS",
-    description:
-      "GIS-integrated hydraulic network model for the Ratmalana/Moratuwa Wastewater Disposal Project. Modelled pipeline layouts, drainage catchments, and treatment plant infrastructure using AutoCAD, QGIS, and SewerGEMS under the Greater Colombo WWMIIP.",
-    technologies: ["AutoCAD", "QGIS", "SewerGEMS", "GIS", "Asset Information"],
-    links: {},
-    highlights: [
-      "GIS Pipeline Mapping",
-      "Hydraulic Network Model",
-      "Asset Information Records",
-      "WWMIIP Support",
-    ],
-    status: "Completed",
-    featured: false,
-    location: "Sri Lanka",
-    duration: "2019 – 2020",
-    company: "National Water Supply & Drainage Board",
+    duration: "2024 – 2025",
+    company: "Riga Technical University, Latvia",
   },
   {
     title: "BIM Construction Project Manager",
     subtitle: "BIM-linked Web Application",
     description:
-      "A construction project management web platform that bridges BIM model data with real-time project tracking, resource management, and reporting dashboards. Built to demonstrate integration of AEC digital workflows with modern web technologies.",
-    technologies: ["TypeScript", "React", "Node.js", "BIM Data", "Project Management"],
+      "A construction project management web platform built to bridge BIM model data with real-time project tracking, resource scheduling, and reporting dashboards. Demonstrates integration of AEC digital workflows with modern web technologies.",
+    technologies: ["TypeScript", "React", "Node.js", "BIM Data Integration", "Project Management"],
     links: {
       github: "https://github.com/Gevindu-Piyawansha/construction-project-manager",
       live: "https://construction-project-manager.vercel.app/",
     },
     highlights: [
       "BIM Data Integration",
-      "Resource Management",
-      "Timeline Planning",
-      "AEC Dashboard",
+      "Resource & Timeline Management",
+      "AEC Reporting Dashboard",
+      "Live Web Application",
     ],
     status: "In Progress",
-    featured: false,
-  },
-  {
-    title: "Dream Property – BIM for FM",
-    subtitle: "BIM Modelling · Facility Management",
-    description:
-      "Developed BIM models for real estate and facility management projects during master's internship at SIA Dream Property Management, Latvia. Included existing building documentation, material assessments, and asset data capture.",
-    technologies: ["Autodesk Revit", "AutoCAD", "Facility Management", "Asset Documentation"],
-    links: {},
-    highlights: [
-      "Existing Building Modelling",
-      "Asset Information Capture",
-      "Material Assessments",
-      "FM-ready Models",
-    ],
-    status: "Completed",
-    featured: false,
-    location: "Latvia",
-    duration: "2024",
-    company: "SIA Dream Property Management",
-  },
-];
-
-const engineeringProjects = [
-  {
-    title: "SCADA Digital Twin – Wastewater Treatment",
-    subtitle: "Master's Thesis Project",
-    description:
-      "Developing a real-time monitoring and digital twin solution for municipal wastewater treatment plants. Integrates SCADA sensor data with BIM asset models for predictive maintenance, process optimization, and cost reduction.",
-    technologies: ["SCADA Systems", "IoT Sensors", "Digital Twin", "Data Analytics", "Process Control"],
-    links: {},
-    highlights: [
-      "Digital Twin Integration",
-      "Real-time Monitoring",
-      "Predictive Maintenance",
-      "Process Optimization",
-    ],
-    status: "In Progress",
-    featured: true,
-    location: "Latvia",
-    duration: "2024 – 2025",
-    company: "Riga Technical University",
-  },
-  {
-    title: "Canterbury Residencies – Construction Management",
-    subtitle: "Site Execution · QA/QC · Scheduling",
-    description:
-      "Full lifecycle site management for a 137-unit residential development (1.4B LKR). Coordinated multidisciplinary teams, enforced QA/QC procedures, managed contractor performance, and tracked project scheduling and material procurement.",
-    technologies: ["MS Project", "BOQ", "QA/QC", "Site Management", "H&S"],
-    links: {},
-    highlights: [
-      "137-unit Residential Project",
-      "Multidisciplinary Coordination",
-      "QA/QC Enforcement",
-      "48M NOK Project Value",
-    ],
-    status: "Completed",
-    featured: true,
-    location: "Sri Lanka",
-    duration: "2021 – 2022",
-    company: "Homelands Skyline (Pvt) Ltd",
-  },
-  {
-    title: "Iconic Galaxy High Rise – QA & Documentation",
-    subtitle: "Structural Inspection · Material Testing",
-    description:
-      "Site inspections, material testing, and quality control for a high-rise building in Rajagiriya. Verified concrete, rebar, and structural works against approved drawings. Assisted with daily reporting and contractor coordination.",
-    technologies: ["Structural Inspection", "Material Testing", "QA/QC", "AutoCAD"],
-    links: {},
-    highlights: [
-      "High-rise Construction",
-      "Structural Verification",
-      "Material Testing",
-      "Quality Control",
-    ],
-    status: "Completed",
-    featured: false,
-    location: "Sri Lanka",
-    duration: "2019 – 2020",
-    company: "MAGA Engineering Pvt Ltd",
-  },
-  {
-    title: "Luxury Residential Developments",
-    subtitle: "Construction Execution · BOQ Management",
-    description:
-      "Executed construction of luxury housing and condominium projects in Colombo District. Led site teams, reviewed technical drawings, prepared Bills of Quantities, and managed design change requests in coordination with clients and consultants.",
-    technologies: ["BOQ", "Site Management", "Structural Works", "H&S", "Scheduling"],
-    links: {},
-    highlights: [
-      "Luxury Condominiums",
-      "BOQ Preparation",
-      "Design Change Management",
-      "Team Leadership",
-    ],
-    status: "Completed",
-    featured: false,
-    location: "Sri Lanka",
-    duration: "2020 – 2021",
-    company: "Nikko Construction (Pvt) Ltd",
+    duration: "2024 – Present",
   },
 ];
 
 function Projects() {
-  const [activeTab, setActiveTab] = useState("bim");
-
-  const projects = activeTab === "bim" ? bimProjects : engineeringProjects;
-
   return (
     <section
       id="projects"
@@ -196,51 +70,21 @@ function Projects() {
         <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4 text-center">
           Projects
         </h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-          BIM coordination, digital modelling, and construction project delivery
+        <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-teal-600 to-blue-700 mx-auto mb-4"></div>
+        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+          Self-initiated BIM work, academic research, and digital tools for the
+          AEC sector
         </p>
 
-        {/* Tab Navigation */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-white rounded-full p-1 shadow-md inline-flex">
-            <button
-              onClick={() => setActiveTab("bim")}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === "bim"
-                  ? "bg-gradient-to-r from-teal-600 to-blue-700 text-white shadow-lg"
-                  : "text-gray-600 hover:text-teal-600"
-              }`}
-            >
-              <Layers className="w-5 h-5" />
-              BIM Projects
-            </button>
-            <button
-              onClick={() => setActiveTab("engineering")}
-              className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                activeTab === "engineering"
-                  ? "bg-gradient-to-r from-teal-600 to-blue-700 text-white shadow-lg"
-                  : "text-gray-600 hover:text-teal-600"
-              }`}
-            >
-              <Building2 className="w-5 h-5" />
-              Engineering Projects
-            </button>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100"
+              className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-gray-100 flex flex-col"
             >
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
-                  {activeTab === "bim" ? (
-                    <Layers className="w-6 h-6 text-teal-600 flex-shrink-0" />
-                  ) : (
-                    <Building2 className="w-6 h-6 text-teal-600 flex-shrink-0" />
-                  )}
+                  <Layers className="w-6 h-6 text-teal-600 flex-shrink-0" />
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800">
                       {project.title}
@@ -249,7 +93,7 @@ function Projects() {
                   </div>
                 </div>
                 <span
-                  className={`px-3 py-1 rounded-full text-xs font-semibold flex-shrink-0 ${
+                  className={`px-3 py-1 rounded-full text-xs font-semibold flex-shrink-0 ml-2 ${
                     project.status === "Completed"
                       ? "bg-green-100 text-green-700"
                       : "bg-yellow-100 text-yellow-700"
@@ -259,17 +103,12 @@ function Projects() {
                 </span>
               </div>
 
-              {(project.location || project.duration) && (
-                <div className="flex flex-col gap-1 text-xs text-gray-500 mb-3">
-                  <div className="flex gap-4">
-                    {project.location && <span>📍 {project.location}</span>}
-                    {project.duration && <span>📅 {project.duration}</span>}
-                  </div>
-                  {project.company && <span>🏢 {project.company}</span>}
-                </div>
-              )}
+              <div className="flex flex-col gap-0.5 text-xs text-gray-500 mb-3">
+                {project.duration && <span>📅 {project.duration}</span>}
+                {project.company && <span>🏢 {project.company}</span>}
+              </div>
 
-              <p className="text-gray-700 mb-4 text-sm leading-relaxed">
+              <p className="text-gray-700 mb-4 text-sm leading-relaxed flex-1">
                 {project.description}
               </p>
 
@@ -297,7 +136,7 @@ function Projects() {
               </div>
 
               {Object.keys(project.links).length > 0 && (
-                <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-100">
+                <div className="flex flex-wrap gap-4 pt-4 border-t border-gray-100 mt-auto">
                   {project.links.github && (
                     <a
                       href={project.links.github}
