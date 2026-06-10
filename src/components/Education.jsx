@@ -10,34 +10,21 @@ import {
 function Education() {
   const education = [
     {
-      title:
-        "Master of Science - Civil Construction and Real Estate Management",
+      title: "Master of Science – Civil Construction and Real Estate Management",
       institution: "Riga Technical University",
-      period: "Mar 2023 - Jun 2025",
+      period: "Mar 2023 – Jun 2025",
       location: "Latvia",
       type: "Master's Degree",
       icon: GraduationCap,
-      gradient: "from-green-500 to-blue-600",
-      bgGradient: "from-green-50 to-blue-50",
+      gradient: "from-teal-500 to-blue-600",
+      bgGradient: "from-teal-50 to-blue-50",
       description:
-        "Final GPA: 8.46/10. Experienced in civil construction project planning, real estate development, and asset management, with expertise aligned to European professional standards (FIABCI, CEPI).",
-    },
-    {
-      title: "Diploma - Comprehensive Master Java Developer",
-      institution: "Institute of Software Engineering (IJSE)",
-      period: "Nov 2024 - Jun 2025",
-      location: "Sri Lanka",
-      type: "Professional Diploma",
-      icon: Award,
-      gradient: "from-blue-500 to-purple-600",
-      bgGradient: "from-blue-50 to-purple-50",
-      description:
-        "Trained in professional software engineering principles with strong foundations in Java, object-oriented programming, design patterns (MVC, Singleton, DAO, Factory), and database/network programming.",
+        "Final GPA: 8.46/10. Specialised in civil construction project planning, BIM-integrated project management, real estate development, and asset management aligned with European professional standards (FIABCI, CEPI).",
     },
     {
       title: "Sustainable Mobility Program (Erasmus+ Scholarship)",
       institution: "Riga Technical University & University of Pardubice",
-      period: "Mar 2025 - May 2025",
+      period: "Mar 2025 – May 2025",
       location: "Latvia & Czech Republic",
       type: "Certificate Program",
       icon: BadgeCheck,
@@ -47,27 +34,26 @@ function Education() {
         "Developed practical skills in sustainable transport planning, urban mobility solutions, and European best practices for environmental, social, and economic aspects of mobility.",
     },
     {
-      title:
-        "Bachelor of Engineering (Honors) - Civil Engineering with Structural Design",
+      title: "Bachelor of Engineering (Hons) – Civil Engineering with Structural Design",
       institution: "University of East London",
-      period: "Nov 2019 - Jun 2021",
+      period: "Nov 2019 – Jun 2021",
       location: "United Kingdom",
       type: "Bachelor's Degree",
       icon: GraduationCap,
       gradient: "from-red-500 to-orange-600",
       bgGradient: "from-red-50 to-orange-50",
       description:
-        "Graduated with First Class Honors. Focused on structural design, highway engineering, construction engineering, and applied civil engineering principles.",
+        "Graduated with First Class Honours. Focused on structural design, highway engineering, construction engineering, and applied civil engineering principles.",
     },
     {
-      title: "National Diploma in Technology - Civil Engineering Technology",
+      title: "National Diploma in Technology – Civil Engineering Technology",
       institution: "Institute of Technology, University of Moratuwa",
-      period: "Dec 2016 - Mar 2020",
+      period: "Dec 2016 – Mar 2020",
       location: "Sri Lanka",
       type: "National Diploma",
       icon: GraduationCap,
-      gradient: "from-teal-500 to-cyan-600",
-      bgGradient: "from-teal-50 to-cyan-50",
+      gradient: "from-cyan-500 to-teal-600",
+      bgGradient: "from-cyan-50 to-teal-50",
       description:
         "Trained in civil engineering technology, construction methods, surveying, and project management.",
     },
@@ -75,48 +61,59 @@ function Education() {
 
   const courses = [
     {
-      title: "MERN Industrial Expert Masterclass",
-      institution: "IDET - Institute of Digital Engineering Technology",
-      period: "Oct 2025 - Present",
-      duration: "100 hours",
-      location: "Sri Lanka",
+      title: "BIM Coordination & Revit (6 Certificates)",
+      institution: "LinkedIn Learning, Alison & Plannery",
+      period: "2026",
+      duration: "Multiple courses",
+      location: "Online",
       icon: BookOpen,
-      gradient: "from-indigo-500 to-blue-600",
-      bgGradient: "from-indigo-50 to-blue-50",
+      gradient: "from-teal-500 to-blue-600",
+      bgGradient: "from-teal-50 to-blue-50",
       description:
-        "Proficient in developing and deploying full-stack web applications using the MERN stack (MongoDB, Express.js, React, Node.js) with modern, industry-standard practices.",
+        "Comprehensive BIM training covering Revit modelling, BIM coordination workflows, clash detection with Navisworks, Dynamo scripting, and ISO 19650 information management standards.",
     },
     {
-      title:
-        "DevOps / TechOps (Infrastructure-Operations) Industrial Expert Masterclass",
-      institution: "IDET - Institute of Digital Engineering Technology",
-      period: "Sept 2025 - Nov 2025",
-      duration: "30 hours",
-      location: "Sri Lanka",
+      title: "A1 Norwegian for Foreigners with Higher Education",
+      institution: "University of Stavanger",
+      period: "2025 – 2026",
+      duration: "Semester course",
+      location: "Stavanger, Norway",
       icon: BookOpen,
-      gradient: "from-orange-500 to-red-600",
-      bgGradient: "from-orange-50 to-red-50",
+      gradient: "from-blue-500 to-indigo-600",
+      bgGradient: "from-blue-50 to-indigo-50",
       description:
-        "Skilled in infrastructure and operations management with hands-on experience in Linux administration, shell scripting, DevOps tools (Jenkins, Ansible, Grafana), and containerization using Docker and Kubernetes.",
+        "Formal Norwegian language course at the University of Stavanger designed for professionals with higher education backgrounds.",
+    },
+    {
+      title: "B1 Norwegian Language Course",
+      institution: "Lenoo",
+      period: "Ongoing",
+      duration: "Self-paced",
+      location: "Online",
+      icon: BookOpen,
+      gradient: "from-indigo-500 to-purple-600",
+      bgGradient: "from-indigo-50 to-purple-50",
+      description:
+        "Continuing Norwegian language development towards B1 proficiency for professional integration in the Norwegian AEC sector.",
     },
     {
       title: "Introduction to Programming with C#",
       institution: "Microsoft",
-      period: "Completed",
+      period: "2025",
       duration: "30 hours",
       location: "Online",
       icon: BookOpen,
-      gradient: "from-purple-500 to-violet-600",
-      bgGradient: "from-purple-50 to-violet-50",
+      gradient: "from-orange-500 to-red-600",
+      bgGradient: "from-orange-50 to-red-50",
       description:
-        "Gained practical experience in C#, .NET Framework, using Microsoft Visual Studio, debugging, and applying programming concepts to build efficient, structured code.",
+        "Practical C# and .NET programming for BIM automation, Revit API scripting foundations, and AEC digital workflow development.",
     },
   ];
 
   const certifications = [
     {
       title: "Associate Member",
-      organization: "Institution of Engineers Sri Lanka (IIESL)",
+      organization: "Institution of Incorporated Engineers Sri Lanka (IIESL)",
       number: "AM 6355",
       icon: BadgeCheck,
       gradient: "from-yellow-500 to-amber-600",
@@ -138,10 +135,10 @@ function Education() {
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
             Education
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-700 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Academic background combining engineering expertise with modern
-            technology
+            Academic background combining civil engineering excellence with
+            digital construction expertise
           </p>
         </div>
 
@@ -162,9 +159,7 @@ function Education() {
                   <h3 className="text-xl font-semibold text-gray-800">
                     {edu.title}
                   </h3>
-                  <p className="text-blue-700 font-semibold">
-                    {edu.institution}
-                  </p>
+                  <p className="text-teal-700 font-semibold">{edu.institution}</p>
                   <div className="flex flex-wrap gap-4 text-gray-600 text-sm mt-2">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
@@ -187,11 +182,12 @@ function Education() {
         {/* Courses Section */}
         <div className="text-center mb-12 mt-20">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-            Courses
+            Courses &amp; Development
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-orange-600 to-red-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-700 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Continuous learning and skill development in modern technologies
+            BIM certifications, language training, and continuous professional
+            development
           </p>
         </div>
 
@@ -212,9 +208,7 @@ function Education() {
                   <h3 className="text-xl font-semibold text-gray-800">
                     {course.title}
                   </h3>
-                  <p className="text-blue-700 font-semibold">
-                    {course.institution}
-                  </p>
+                  <p className="text-teal-700 font-semibold">{course.institution}</p>
                   <div className="flex flex-wrap gap-4 text-gray-600 text-sm mt-2">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-4 h-4" />
@@ -224,7 +218,7 @@ function Education() {
                       <MapPin className="w-4 h-4" />
                       {course.location}
                     </span>
-                    <span className="text-purple-600 font-semibold">
+                    <span className="text-teal-600 font-semibold">
                       {course.duration}
                     </span>
                   </div>
@@ -240,11 +234,11 @@ function Education() {
         {/* Certifications Section */}
         <div className="text-center mb-12 mt-20">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-4">
-            Certifications
+            Professional Memberships
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-green-600 to-emerald-600 mx-auto mb-6"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-teal-600 to-blue-700 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Recognized professional memberships and certifications
+            Recognized engineering memberships and professional registrations
           </p>
         </div>
 
@@ -265,7 +259,7 @@ function Education() {
                   <h3 className="text-lg font-semibold text-gray-800">
                     {cert.title}
                   </h3>
-                  <p className="text-blue-700 font-medium text-sm">
+                  <p className="text-teal-700 font-medium text-sm">
                     {cert.organization}
                   </p>
                   <p className="text-gray-600 text-sm mt-1">

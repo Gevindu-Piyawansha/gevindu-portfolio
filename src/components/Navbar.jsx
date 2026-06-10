@@ -48,11 +48,11 @@ function Navbar({ onContactClick }) {
           className="flex items-center gap-2 cursor-pointer group"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
-          <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+          <div className="w-10 h-10 bg-gradient-to-r from-teal-600 to-blue-700 rounded-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
             <span className="text-white font-bold text-xl">G</span>
           </div>
-          <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            Portfolio
+          <span className="text-xl font-bold bg-gradient-to-r from-teal-600 to-blue-700 bg-clip-text text-transparent">
+            BIM Portfolio
           </span>
         </div>
 
@@ -70,7 +70,7 @@ function Navbar({ onContactClick }) {
           ))}
           <button
             onClick={onContactClick}
-            className="ml-2 px-6 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200 flex items-center gap-2"
+            className="ml-2 px-6 py-2 bg-gradient-to-r from-teal-600 to-blue-700 text-white font-semibold rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-200 flex items-center gap-2"
           >
             <Mail className="w-4 h-4" />
             Contact
@@ -106,7 +106,7 @@ function Navbar({ onContactClick }) {
                 toggleMenu();
                 onContactClick();
               }}
-              className="w-full flex items-center justify-center gap-3 px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200"
+              className="w-full flex items-center justify-center gap-3 px-4 py-3 bg-gradient-to-r from-teal-600 to-blue-700 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200"
             >
               <Mail className="w-5 h-5" />
               Contact

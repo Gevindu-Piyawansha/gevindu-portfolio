@@ -60,12 +60,12 @@ function Footer() {
                 <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start gap-8 lg:gap-12">
                     {/* Left Section */}
                     <div className="text-center lg:text-left flex-1">
-                        <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">
+                        <h3 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent mb-4">
                             Feel free to reach out
                         </h3>
                         <p className="text-gray-400 mb-6 flex items-center justify-center lg:justify-start gap-2">
                             <Code className="w-4 h-4 sm:w-5 sm:h-5" />
-                            Built with React & Tailwind CSS
+                            BIM Engineer &amp; Digital Construction Specialist
                         </p>
 
                         {/* Social Links */}
@@ -125,9 +125,9 @@ function Footer() {
                         </p>
 
                         <div className="flex items-center gap-2 text-gray-400 text-xs sm:text-sm">
-                            <span>Made with</span>
+                            <span>Built for the</span>
                             <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-red-500 fill-current" />
-                            <span>for the tech community</span>
+                            <span>AEC community</span>
                         </div>
                     </div>
                 </div>
