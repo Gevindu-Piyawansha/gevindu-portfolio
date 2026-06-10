@@ -1,4 +1,5 @@
 import { SiAutodesk } from "react-icons/si";
+import { useState } from "react";
 import {
   Layers,
   Building2,
@@ -11,6 +12,7 @@ import {
   GitBranch,
   Shield,
   Cpu,
+  ChevronDown,
 } from "lucide-react";
 
 const experiences = [
@@ -44,7 +46,7 @@ const experiences = [
     company: "Homelands Skyline (Pvt) Ltd",
     location: "Sri Lanka",
     duration: "May 2021 – Dec 2022",
-    project: "Canterbury Residencies – 137-unit residential (1.4B LKR / ~48M NOK), Piliyandala",
+    project: "Canterbury Residencies – 137-unit residential (1.4B LKR / ~48M NOK)",
     responsibilities: [
       "Updated Revit models and managed RFIs across structural, MEP, and architectural disciplines — reducing design revisions by ~15%",
       "Coordinated multidisciplinary teams and ensured compliance with the BIM Execution Plan",
@@ -110,6 +112,8 @@ const tools = [
 ];
 
 export default function Experience() {
+  const [openIndex, setOpenIndex] = useState(0);
+
   return (
     <section
       id="experience"
@@ -124,7 +128,7 @@ export default function Experience() {
       </p>
 
       <div className="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto px-6">
-        {/* Tool Icons */}
+        {/* Tool Icons — sticky on desktop */}
         <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center w-full lg:w-2/5 lg:self-start lg:sticky lg:top-28">
           {tools.map(({ icon: Icon, color, label }, idx) => (
             <div
@@ -141,38 +145,62 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Timeline */}
-        <div className="bg-white p-4 sm:p-6 rounded-2xl shadow-xl flex flex-col space-y-6 w-full lg:w-3/5">
-          {experiences.map((exp, index) => (
-            <div key={index}>
-              {index > 0 && (
-                <div className="border-t border-teal-100 mb-6 pt-4"></div>
-              )}
-              <h3 className="text-lg sm:text-xl font-bold text-teal-700 mb-1">
-                {exp.title}
-              </h3>
-              <p className="text-sm font-semibold text-gray-700 mb-1">
-                {exp.company}
-              </p>
-              <div className="flex flex-wrap gap-3 text-xs sm:text-sm text-gray-500 mt-2 mb-3">
-                <span>📍 {exp.location}</span>
-                <span>📅 {exp.duration}</span>
+        {/* Accordion Timeline */}
+        <div className="flex flex-col gap-3 w-full lg:w-3/5">
+          {experiences.map((exp, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <div
+                key={index}
+                className={`bg-white rounded-2xl shadow-md transition-all duration-300 overflow-hidden border ${
+                  isOpen ? "border-teal-300 shadow-lg" : "border-gray-100"
+                }`}
+              >
+                {/* Header — always visible */}
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : index)}
+                  className="w-full text-left px-5 py-4 flex items-start justify-between gap-3 group"
+                >
+                  <div className="flex-1 min-w-0">
+                    <p className="text-base font-bold text-teal-700 leading-snug">
+                      {exp.title}
+                    </p>
+                    <p className="text-sm font-semibold text-gray-700 mt-0.5">
+                      {exp.company}
+                    </p>
+                    <div className="flex flex-wrap gap-3 text-xs text-gray-500 mt-1">
+                      <span>📍 {exp.location}</span>
+                      <span>📅 {exp.duration}</span>
+                    </div>
+                  </div>
+                  <ChevronDown
+                    className={`w-5 h-5 text-teal-500 flex-shrink-0 mt-1 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+
+                {/* Expandable body */}
+                {isOpen && (
+                  <div className="px-5 pb-5 border-t border-teal-50">
+                    {exp.project && (
+                      <p className="text-xs text-teal-600 font-semibold mt-3 mb-3 bg-teal-50 px-2 py-1 rounded-lg inline-block">
+                        {exp.project}
+                      </p>
+                    )}
+                    <ul className="space-y-2 text-gray-700 text-sm">
+                      {exp.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="flex items-start gap-3 leading-normal">
+                          <span className="text-teal-500 mt-1 text-base flex-shrink-0">•</span>
+                          <span>{resp}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-              {exp.project && (
-                <p className="text-xs sm:text-sm text-teal-600 font-semibold mb-2 bg-teal-50 px-2 py-0.5 rounded-lg inline-block">
-                  {exp.project}
-                </p>
-              )}
-              <ul className="mt-3 space-y-2 text-gray-700 text-sm">
-                {exp.responsibilities.map((resp, idx) => (
-                  <li key={idx} className="flex items-start gap-3 leading-normal">
-                    <span className="text-teal-500 mt-1 text-base">•</span>
-                    <span>{resp}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
