@@ -3,7 +3,6 @@ import {
   Linkedin,
   ChevronDown,
   Mail,
-  Download,
   CheckCircle,
   X,
 } from "lucide-react";
@@ -244,14 +243,6 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
               View BIM Projects
             </button>
 
-            <a
-              href="/CV_PDGC Piyawansha_Eng.pdf"
-              download="CV_Gevindu_Piyawansha.pdf"
-              className="px-6 sm:px-8 py-3 rounded-full border-2 border-teal-600 text-teal-600 font-semibold bg-white hover:bg-teal-600 hover:text-white transition-all duration-300 shadow-sm flex items-center justify-center gap-2"
-            >
-              <Download className="w-4 h-4" />
-              Download CV
-            </a>
 
             {/* Contact Me Button */}
             <button
