@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 
 const experiences = [
   {
-    title: "BIM Development (Self-Initiated)",
+    title: "BIM Development (Freelance | Self-Initiated)",
     company: "Independent Projects",
     location: "Stavanger, Norway",
     duration: "2025 – Present",
@@ -32,7 +32,8 @@ const experiences = [
     company: "Homelands Skyline (Pvt) Ltd",
     location: "Sri Lanka",
     duration: "May 2021 – Dec 2022",
-    project: "Canterbury Residencies – 137-unit residential (1.4B LKR / ~48M NOK)",
+    project:
+      "Canterbury Residencies – 137-unit residential (1.4B LKR / ~48M NOK)",
     responsibilities: [
       "Updated Revit models and managed RFIs across structural, MEP, and architectural disciplines — reducing design revisions by ~15%",
       "Coordinated multidisciplinary teams and ensured compliance with the BIM Execution Plan",
@@ -78,7 +79,6 @@ const experiences = [
     ],
   },
 ];
-
 
 export default function Experience() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -141,8 +141,13 @@ export default function Experience() {
                     )}
                     <ul className="space-y-2 text-gray-700 text-sm">
                       {exp.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="flex items-start gap-3 leading-normal">
-                          <span className="text-teal-500 mt-1 text-base flex-shrink-0">•</span>
+                        <li
+                          key={idx}
+                          className="flex items-start gap-3 leading-normal"
+                        >
+                          <span className="text-teal-500 mt-1 text-base flex-shrink-0">
+                            •
+                          </span>
                           <span>{resp}</span>
                         </li>
                       ))}
