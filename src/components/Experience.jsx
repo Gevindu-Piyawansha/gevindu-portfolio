@@ -1,19 +1,5 @@
-import { SiAutodesk } from "react-icons/si";
 import { useState } from "react";
-import {
-  Layers,
-  Building2,
-  MapPin,
-  Ruler,
-  HardHat,
-  ClipboardCheck,
-  FileText,
-  Calculator,
-  GitBranch,
-  Shield,
-  Cpu,
-  ChevronDown,
-} from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const experiences = [
   {
@@ -93,23 +79,6 @@ const experiences = [
   },
 ];
 
-const tools = [
-  { icon: SiAutodesk, color: "text-red-600", label: "Revit" },
-  { icon: SiAutodesk, color: "text-blue-600", label: "AutoCAD" },
-  { icon: SiAutodesk, color: "text-orange-500", label: "Navisworks" },
-  { icon: SiAutodesk, color: "text-yellow-500", label: "Inventor" },
-  { icon: GitBranch, color: "text-purple-600", label: "Dynamo" },
-  { icon: MapPin, color: "text-green-600", label: "QGIS" },
-  { icon: Ruler, color: "text-cyan-600", label: "SewerGEMS" },
-  { icon: Shield, color: "text-blue-700", label: "ISO 19650" },
-  { icon: Layers, color: "text-teal-600", label: "BIM Coord." },
-  { icon: HardHat, color: "text-orange-600", label: "Site Mgmt" },
-  { icon: ClipboardCheck, color: "text-purple-600", label: "QA / QC" },
-  { icon: Calculator, color: "text-gray-700", label: "BOQ / QTO" },
-  { icon: FileText, color: "text-indigo-600", label: "RFI Mgmt" },
-  { icon: Building2, color: "text-gray-600", label: "Construction" },
-  { icon: Cpu, color: "text-green-700", label: "C# / MERN" },
-];
 
 export default function Experience() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -127,26 +96,8 @@ export default function Experience() {
         BIM coordination, digital modelling, and construction site management
       </p>
 
-      <div className="flex flex-col lg:flex-row gap-6 max-w-6xl mx-auto px-6">
-        {/* Tool Icons — sticky on desktop */}
-        <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-3 gap-4 sm:gap-6 justify-items-center w-full lg:w-2/5 lg:self-start lg:sticky lg:top-28">
-          {tools.map(({ icon: Icon, color, label }, idx) => (
-            <div
-              key={`${label}-${idx}`}
-              className="flex flex-col items-center justify-center space-y-1 p-1"
-            >
-              <Icon
-                className={`text-3xl sm:text-4xl ${color} hover:scale-110 transition-transform duration-200`}
-              />
-              <span className="text-center text-[10px] sm:text-xs font-medium">
-                {label}
-              </span>
-            </div>
-          ))}
-        </div>
-
-        {/* Accordion Timeline */}
-        <div className="flex flex-col gap-3 w-full lg:w-3/5">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="flex flex-col gap-3 w-full">
           {experiences.map((exp, index) => {
             const isOpen = openIndex === index;
             return (

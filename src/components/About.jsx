@@ -1,4 +1,5 @@
-import { User, Wrench } from "lucide-react";
+import { User, Wrench, Building2, GitBranch, MapPin, Cpu, BarChart2 } from "lucide-react";
+import { SiAutodesk } from "react-icons/si";
 
 const competencies = [
   {
@@ -34,14 +35,14 @@ const competencies = [
 ];
 
 const software = [
-  { name: "Autodesk Revit", level: "Advanced", detail: "architectural & structural modelling, families, documentation" },
-  { name: "Navisworks Manage", level: "Advanced", detail: "clash detection, federated coordination, 4D TimeLiner" },
-  { name: "Tekla Structural Designer", level: "Advanced", detail: "structural analysis, design, and engineering workflows" },
-  { name: "Dynamo", level: "Basic", detail: "workflow automation, parameter management" },
-  { name: "AutoCAD", level: "Advanced", detail: "drafting, detailing and infrastructure design" },
-  { name: "MS Project", level: "Intermediate", detail: "planning & scheduling" },
-  { name: "QGIS / SewerGEMS", level: "Basic", detail: "infrastructure & GIS support" },
-  { name: "Python / Java / MERN", level: "Intermediate", detail: "scripting, BIM data tools, full-stack development" },
+  { name: "Autodesk Revit", level: "Advanced", detail: "architectural & structural modelling, families, documentation", icon: SiAutodesk, iconColor: "text-red-600" },
+  { name: "Navisworks Manage", level: "Advanced", detail: "clash detection, federated coordination, 4D TimeLiner", icon: SiAutodesk, iconColor: "text-orange-500" },
+  { name: "Tekla Structural Designer", level: "Advanced", detail: "structural analysis, design, and engineering workflows", icon: Building2, iconColor: "text-blue-600" },
+  { name: "Dynamo", level: "Basic", detail: "workflow automation, parameter management", icon: GitBranch, iconColor: "text-purple-600" },
+  { name: "AutoCAD", level: "Advanced", detail: "drafting, detailing and infrastructure design", icon: SiAutodesk, iconColor: "text-blue-400" },
+  { name: "MS Project", level: "Intermediate", detail: "planning & scheduling", icon: BarChart2, iconColor: "text-blue-700" },
+  { name: "QGIS / SewerGEMS", level: "Basic", detail: "infrastructure & GIS support", icon: MapPin, iconColor: "text-green-600" },
+  { name: "Python / Java / MERN", level: "Intermediate", detail: "scripting, BIM data tools, full-stack development", icon: Cpu, iconColor: "text-green-700" },
 ];
 
 const levelColor = {
@@ -107,18 +108,24 @@ function About() {
             <Wrench className="w-6 h-6 text-teal-600" /> Software &amp; Tools
           </h3>
           <div className="max-w-4xl mx-auto space-y-3">
-            {software.map((s) => (
-              <div
-                key={s.name}
-                className="flex flex-col sm:flex-row sm:items-center gap-2 bg-gray-50 border border-gray-100 rounded-xl px-5 py-3 shadow-sm"
-              >
-                <span className="font-semibold text-gray-800 w-52 flex-shrink-0 text-sm">{s.name}</span>
-                <span className={`text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ${levelColor[s.level]}`}>
-                  {s.level}
-                </span>
-                <span className="text-gray-500 text-sm">— {s.detail}</span>
-              </div>
-            ))}
+            {software.map((s) => {
+              const SoftIcon = s.icon;
+              return (
+                <div
+                  key={s.name}
+                  className="flex flex-col sm:flex-row sm:items-center gap-2 bg-gray-50 border border-gray-100 rounded-xl px-5 py-3 shadow-sm"
+                >
+                  <div className="flex items-center gap-2 w-56 flex-shrink-0">
+                    <SoftIcon className={`text-lg flex-shrink-0 ${s.iconColor}`} />
+                    <span className="font-semibold text-gray-800 text-sm">{s.name}</span>
+                  </div>
+                  <span className={`text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ${levelColor[s.level]}`}>
+                    {s.level}
+                  </span>
+                  <span className="text-gray-500 text-sm">— {s.detail}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
