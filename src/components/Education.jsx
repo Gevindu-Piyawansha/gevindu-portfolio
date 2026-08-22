@@ -61,40 +61,52 @@ function Education() {
 
   const courses = [
     {
-      title: "BIM Coordination & Revit (6 Certificates)",
-      institution: "LinkedIn Learning, Alison & Plannery",
+      title: "buildingSMART Professional Certification — Entry (openBIM)",
+      institution: "buildingSMART International",
       period: "2026",
-      duration: "Multiple courses",
+      duration: "Professional Certification",
       location: "Online",
-      icon: BookOpen,
+      icon: BadgeCheck,
       gradient: "from-teal-500 to-blue-600",
       bgGradient: "from-teal-50 to-blue-50",
       description:
-        "Comprehensive BIM training covering Revit modelling, BIM coordination workflows, clash detection with Navisworks, Dynamo scripting, and ISO 19650 information management standards.",
+        "Industry-recognised openBIM certification covering IFC standards, open data workflows, and buildingSMART international best practices for BIM information exchange.",
     },
     {
-      title: "A1 Norwegian for Foreigners with Higher Education",
-      institution: "University of Stavanger",
-      period: "2025 – 2026",
-      duration: "Semester course",
-      location: "Stavanger, Norway",
-      icon: BookOpen,
+      title: "ISO 19650 Information Manager Levels 1–3 (Level 3: Expert)",
+      institution: "Plannerly",
+      period: "2025",
+      duration: "Levels 1–3",
+      location: "Online",
+      icon: BadgeCheck,
       gradient: "from-blue-500 to-indigo-600",
       bgGradient: "from-blue-50 to-indigo-50",
       description:
-        "Formal Norwegian language course at the University of Stavanger designed for professionals with higher education backgrounds.",
+        "Comprehensive ISO 19650 training covering BIM information management from foundation to expert level, including CDE workflows, naming conventions, BEPs, and TIDP/MIDP milestone management.",
     },
     {
-      title: "B1 Norwegian Language Course",
-      institution: "Lenoo",
-      period: "Ongoing",
-      duration: "Self-paced",
+      title: "Construction Management Procedures",
+      institution: "Alison",
+      period: "2026",
+      duration: "Certificate",
+      location: "Online",
+      icon: BookOpen,
+      gradient: "from-emerald-500 to-teal-600",
+      bgGradient: "from-emerald-50 to-teal-50",
+      description:
+        "Structured training in construction management principles, project lifecycle procedures, and best practices for delivering projects on time, on budget, and to specification.",
+    },
+    {
+      title: "Revit: Modeling Best Practices for BIM",
+      institution: "LinkedIn Learning",
+      period: "2026",
+      duration: "Certificate",
       location: "Online",
       icon: BookOpen,
       gradient: "from-indigo-500 to-purple-600",
       bgGradient: "from-indigo-50 to-purple-50",
       description:
-        "Continuing Norwegian language development towards B1 proficiency for professional integration in the Norwegian AEC sector.",
+        "Advanced Revit modelling techniques and BIM best practices covering family creation, shared parameters, model organisation, documentation standards, and coordination workflows.",
     },
     {
       title: "Introduction to Programming with C#",
@@ -107,6 +119,18 @@ function Education() {
       bgGradient: "from-orange-50 to-red-50",
       description:
         "Practical C# and .NET programming for BIM automation, Revit API scripting foundations, and AEC digital workflow development.",
+    },
+    {
+      title: "A1 Norwegian for Foreigners with Higher Education",
+      institution: "University of Stavanger",
+      period: "2025 – 2026",
+      duration: "Semester course",
+      location: "Stavanger, Norway",
+      icon: BookOpen,
+      gradient: "from-cyan-500 to-blue-600",
+      bgGradient: "from-cyan-50 to-blue-50",
+      description:
+        "Formal Norwegian language course at the University of Stavanger designed for professionals with higher education backgrounds.",
     },
   ];
 

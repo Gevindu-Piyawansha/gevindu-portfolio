@@ -9,59 +9,91 @@ import { useState } from "react";
 
 const bimProjects = [
   {
-    title: "BIM Development Projects",
-    subtitle: "Revit · Navisworks · Dynamo · Inventor",
+    title: "Canterbury Residencies — 137 Units Residential Development",
+    subtitle: "Revit · Navisworks · Tekla Structural Designer · MS Project · Enscape",
     description:
-      "Ongoing self-initiated BIM practice developing coordinated 3D models, Dynamo automation scripts, and digital workflows aligned with ISO 19650 standards. Covers residential and infrastructure typologies.",
-    technologies: ["Autodesk Revit", "Navisworks", "Dynamo", "Inventor", "ISO 19650"],
-    links: {},
-    highlights: [
-      "3D Multi-discipline Modelling",
-      "Dynamo Scripting & Automation",
-      "ISO 19650 Information Workflows",
-      "Clash Detection Practice",
-    ],
-    status: "In Progress",
-    featured: true,
-    duration: "2025 – Present",
-  },
-  {
-    title: "Canterbury Residencies – BIM Coordination",
-    subtitle: "Revit Model · RFI Management · Clash Detection",
-    description:
-      "Delivered a coordinated multi-discipline BIM model for a 137-unit residential development. Managed RFIs, maintained the BIM Execution Plan, and produced clash detection reports across structural, MEP, and architectural models — reducing design revisions by ~15%.",
-    technologies: ["Autodesk Revit", "AutoCAD", "RFI Management", "BIM Execution Plan", "Clash Detection"],
+      "Site Engineer on a Rs. 1.4 billion, 137-unit residential development, coordinating construction from site mobilisation to handover over a 19-month period. Reviewed technical drawings and structural specifications, supervised site activities, coordinated daily with architects, structural engineers, and MEP consultants, and maintained Revit models and RFIs to ensure BIM information remained aligned with site conditions throughout construction.",
+    technologies: ["Autodesk Revit", "Navisworks", "Tekla Structural Designer", "MS Project", "Enscape", "ISO 19650"],
     links: {},
     highlights: [
       "~15% Reduction in Design Revisions",
-      "Multi-discipline BIM Model",
-      "Clash Detection Reports",
-      "BIM Execution Plan Compliance",
+      "137-unit, Rs. 1.4B Residential Development",
+      "19-month Site-to-Handover Coordination",
+      "ISO 19650 CDE & BEP Compliance",
     ],
     status: "Completed",
     featured: true,
-    location: "Sri Lanka",
+    role: "Site Engineer — Homelands Skyline (Pvt) Ltd, Sri Lanka",
     duration: "2021 – 2022",
-    company: "Homelands Skyline (Pvt) Ltd",
   },
   {
-    title: "Ratmalana/Moratuwa Wastewater Network",
-    subtitle: "AutoCAD · QGIS · SewerGEMS",
+    title: "Residential Buildings",
+    subtitle: "Revit · AutoCAD · Enscape · MS Office",
     description:
-      "GIS-integrated hydraulic network model for the Ratmalana/Moratuwa Wastewater Disposal Project. Produced pipeline layout drawings, GIS catchment maps, and asset information records supporting the Greater Colombo WWMIIP.",
-    technologies: ["AutoCAD", "QGIS", "SewerGEMS", "GIS", "Asset Information Modelling"],
+      "A ~4,200 sq ft three-storey residence with a roof terrace, exposed stone feature wall, tempered-glass skylight roof and 10 ft boundary walls. Produced the full design and construction documentation including architectural and structural drawings, reinforced concrete detailing, door and window schedules plus the itemised BOQ with quantity take-offs. The project included 19 pad foundations, two staircases, three suspended slabs, and a rooftop water tank slab.",
+    technologies: ["Autodesk Revit", "AutoCAD", "Enscape", "MS Office", "BOQ & QTO"],
     links: {},
     highlights: [
-      "GIS Pipeline Layout",
-      "Hydraulic Network Model",
-      "Asset Information Records",
-      "Infrastructure Documentation",
+      "~4,200 sq ft Three-storey Residence",
+      "Full Architectural & Structural Drawing Set",
+      "Door/Window Schedules & BOQ Take-offs",
+      "LKR 14.0M Construction Contract",
+    ],
+    status: "Completed",
+    featured: true,
+    role: "Site Engineer — Nikko Construction (Pvt) Ltd, Sri Lanka",
+    lod: "LOD 100–350",
+  },
+  {
+    title: "Structural Analysis & Design Checks — Tekla Structural Designer",
+    subtitle: "Tekla Structural Designer",
+    description:
+      "Structural analysis built to strengthen Eurocode-based design workflows in Tekla Structural Designer. Modelled a multi-storey steel-framed building with a pitched roof, applied wind, snow, seismic and imposed loads across multiple load cases and combinations, and checked the results against BS EN 1993-1-1 (UK NA, 2005). Wind-drift checks were run storey-by-storey, comparing resultant deflection and drift ratios against the code limit.",
+    technologies: ["Tekla Structural Designer", "Eurocode", "BS EN 1993-1-1", "Wind Analysis", "Seismic Analysis"],
+    links: {},
+    highlights: [
+      "Wind, Seismic & Snow Load Analysis",
+      "Wind-drift Checks Across Load Combinations",
+      "BS EN 1993-1-1 (UK NA, 2005) Code Compliance",
+      "Multi-storey Steel-framed Structure",
     ],
     status: "Completed",
     featured: false,
-    location: "Sri Lanka",
-    duration: "2019 – 2020",
-    company: "National Water Supply & Drainage Board",
+    scope: "Wind, seismic & snow load analysis, wind-drift checks, member design to Eurocode",
+  },
+  {
+    title: "Clash Detection & Model Coordination — Navisworks",
+    subtitle: "Navisworks Manage",
+    description:
+      "Performed clash detection on a federated BIM model by combining Architectural, Structural, and MEP disciplines in Navisworks Manage. Clashes were grouped by level and grid location, reviewed using clash viewpoints, and exported as HTML reports for coordination meetings. Each issue was tracked, assigned, and monitored through resolution to ensure model consistency before construction.",
+    technologies: ["Navisworks Manage", "Clash Detection", "ARC/STR/MEP Coordination", "HTML Reports", "BIM Coordination"],
+    links: {},
+    highlights: [
+      "Federated ARC / STR / MEP Coordination",
+      "Hard Clash Detection & Resolution",
+      "HTML Clash Reports for Coordination Meetings",
+      "Issue Tracking Through to Resolution",
+    ],
+    status: "Completed",
+    featured: false,
+    scope: "Federated ARC / STR / MEP coordination",
+  },
+  {
+    title: "4D Construction Sequencing — Navisworks TimeLiner",
+    subtitle: "Navisworks Manage — TimeLiner",
+    description:
+      "Linked a federated ARC/STR/MEP coordination model (LOD 350) to a construction programme in Navisworks TimeLiner. Tasks were mapped to model objects and simulated month-by-month, from groundworks and foundations through to structural frame and roof completion, giving a clear visual read of build sequence, logic and timing.",
+    technologies: ["Navisworks TimeLiner", "4D Simulation", "LOD 350", "Construction Sequencing", "Programme Scheduling"],
+    links: {},
+    highlights: [
+      "Full Construction Sequence Simulation",
+      "Foundations to Structural Completion",
+      "Schedule Validation & Stakeholder Review",
+      "LOD 350 Federated Model Linked to Programme",
+    ],
+    status: "Completed",
+    featured: false,
+    scope: "4D construction sequencing linking a federated LOD 350 coordination model to the project schedule",
   },
   {
     title: "BIM Construction Project Manager",
@@ -82,25 +114,6 @@ const bimProjects = [
     status: "In Progress",
     featured: false,
     duration: "2024 – Present",
-  },
-  {
-    title: "Dream Property – BIM for Facility Management",
-    subtitle: "Existing Building Modelling · Asset Documentation",
-    description:
-      "Produced BIM models of existing properties for real estate and facility management use cases. Captured building geometry, material data, and asset information to support ongoing property management workflows.",
-    technologies: ["Autodesk Revit", "AutoCAD", "Facility Management", "Asset Information Modelling"],
-    links: {},
-    highlights: [
-      "Existing Building Modelling",
-      "Asset Information Capture",
-      "FM-ready BIM Deliverable",
-      "Material & Condition Data",
-    ],
-    status: "Completed",
-    featured: false,
-    location: "Riga, Latvia",
-    duration: "2024",
-    company: "SIA Dream Property Management",
   },
 ];
 
@@ -261,8 +274,11 @@ function Projects() {
                 </span>
               </div>
 
-              {(project.location || project.duration) && (
+              {(project.role || project.location || project.duration || project.lod || project.scope) && (
                 <div className="flex flex-col gap-0.5 text-xs text-gray-500 mb-3">
+                  {project.role && <span>👷 {project.role}</span>}
+                  {project.lod && <span>📐 LOD: {project.lod}</span>}
+                  {project.scope && <span>🔍 {project.scope}</span>}
                   <div className="flex gap-4">
                     {project.location && <span>📍 {project.location}</span>}
                     {project.duration && <span>📅 {project.duration}</span>}

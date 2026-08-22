@@ -1,26 +1,56 @@
-import {
-  User,
-  MapPin,
-  Languages,
-  Wrench,
-} from "lucide-react";
+import { User, Wrench } from "lucide-react";
+
+const competencies = [
+  {
+    title: "BIM Modelling — LOD 100–350",
+    description:
+      "Architectural & structural BIM models for residential, commercial and industrial projects in accordance with ISO 19650.",
+  },
+  {
+    title: "Clash Detection & Coordination",
+    description:
+      "Federated ARC/STR/MEP coordination in Navisworks with structured clash reports and resolution tracking.",
+  },
+  {
+    title: "Automation — Dynamo & C#",
+    description:
+      "Custom scripts automating sheet setup, parameter management, tagging and documentation.",
+  },
+  {
+    title: "4D Simulation",
+    description:
+      "Navisworks TimeLiner construction sequencing linking models to programme schedules.",
+  },
+  {
+    title: "Construction Knowledge",
+    description:
+      "4+ years of site engineering — QA/QC, RFIs, inspections and multidisciplinary coordination on live projects.",
+  },
+  {
+    title: "Quantities & Documentation",
+    description:
+      "Model-based take-offs, BOQs, drawing production and ISO 19650 information management.",
+  },
+];
+
+const software = [
+  { name: "Autodesk Revit", level: "Advanced", detail: "architectural & structural modelling, families, documentation" },
+  { name: "Navisworks Manage", level: "Advanced", detail: "clash detection, federated coordination, 4D TimeLiner" },
+  { name: "Tekla Structural Designer", level: "Advanced", detail: "structural analysis, design, and engineering workflows" },
+  { name: "Dynamo", level: "Basic", detail: "workflow automation, parameter management" },
+  { name: "AutoCAD", level: "Advanced", detail: "drafting, detailing and infrastructure design" },
+  { name: "MS Project", level: "Intermediate", detail: "planning & scheduling" },
+  { name: "QGIS / SewerGEMS", level: "Basic", detail: "infrastructure & GIS support" },
+  { name: "Python / Java / MERN", level: "Intermediate", detail: "scripting, BIM data tools, full-stack development" },
+];
+
+const levelColor = {
+  Advanced: "bg-teal-100 text-teal-800",
+  Intermediate: "bg-blue-100 text-blue-800",
+  Basic: "bg-gray-100 text-gray-700",
+};
 
 function About() {
-  const bimTools = [
-    "Autodesk Revit",
-    "Navisworks",
-    "Dynamo",
-    "Inventor",
-    "AutoCAD",
-    "QGIS",
-    "SewerGEMS",
-    "MS Project",
-    "ISO 19650",
-    "RFI Management",
-    "BOQ & QTO",
-    "C# / MERN",
-  ];
-
   return (
     <section
       id="about"
@@ -33,97 +63,62 @@ function About() {
           </h2>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-teal-600 to-blue-700 mx-auto mb-6 sm:mb-8"></div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
-            BIM Engineer bridging civil engineering expertise with digital
-            construction technology
+            BIM &amp; VDC Professional • Civil Engineer
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-          {/* Main Story */}
-          <div className="order-2 lg:order-1">
-            <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-6 sm:p-8 rounded-2xl shadow-lg">
-              <User className="w-8 h-8 text-teal-600 mb-4" />
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4 text-gray-800">
-                Journey
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                I'm a Civil Engineer and BIM-focused professional with 4+ years
-                of experience in residential and infrastructure projects,
-                spanning site execution, BIM modelling, and multidisciplinary
-                coordination across Sri Lanka, Latvia, and Norway.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-                My BIM journey began on the Iconic Galaxy High Rise and
-                Canterbury Residencies projects, where I updated Revit models,
-                managed RFIs, and coordinated across structural, MEP, and
-                architectural disciplines — reducing design revisions by ~15%.
-                At SIA Dream Property Management in Latvia, I expanded into BIM
-                modelling for real estate and facility management.
-              </p>
-              <p className="text-gray-700 leading-relaxed mb-6 text-sm sm:text-base">
-                I hold an MSc in Civil Construction and Real Estate Management
-                (GPA 8.46/10, Riga Technical University) and a BEng in Civil
-                Engineering with Structural Design (First Class Honours,
-                University of East London). I've since added 6 BIM Coordination
-                & Revit certificates and am actively developing models and
-                workflows using Revit, Navisworks, Dynamo, and ISO 19650
-                standards. Currently based in Stavanger with full work
-                authorization, I'm actively seeking BIM, engineering support,
-                or construction project roles.
-              </p>
-            </div>
+        {/* Bio */}
+        <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-6 sm:p-8 rounded-2xl shadow-lg mb-10 max-w-4xl mx-auto">
+          <User className="w-8 h-8 text-teal-600 mb-4" />
+          <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
+            I am a Civil Engineer and BIM/VDC professional with 4+ years of experience across residential,
+            high-rise and infrastructure projects in Sri Lanka and Europe, now based in Stavanger, Norway.
+            I hold a Master's degree in Civil Engineering, am buildingSMART-certified (openBIM) and trained
+            as an ISO 19650 Information Manager (Levels 1–3).
+          </p>
+          <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+            I build and coordinate models in Revit, Tekla Structural Designer and Navisworks, and use Dynamo
+            and C# to automate modelling and documentation. My site engineering background means my models
+            reflect how buildings are actually constructed — not just how they look.
+          </p>
+        </div>
+
+        {/* Competencies Grid */}
+        <div className="mb-14">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-center">
+            Core Competencies
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {competencies.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white border border-teal-100 rounded-xl p-5 shadow-sm hover:shadow-md transition-shadow"
+              >
+                <h4 className="text-teal-700 font-semibold text-sm mb-2">{item.title}</h4>
+                <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
           </div>
+        </div>
 
-          {/* Info Cards */}
-          <div className="order-1 lg:order-2 space-y-4 sm:space-y-6">
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600 mb-3" />
-              <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
-                Location & Work Rights
-              </h4>
-              <p className="text-gray-700 text-sm sm:text-base">
-                Stavanger, Norway — full work authorization &amp; NAV
-                arbeidstrening / lønnstilskudd eligible
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-50 to-blue-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <Languages className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600 mb-3" />
-              <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
-                Languages
-              </h4>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center mt-2">
-                  <span className="text-gray-700 text-sm sm:text-base">Sinhala</span>
-                  <span className="text-xs text-green-500 font-medium">Native</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700 text-sm sm:text-base">English</span>
-                  <span className="text-xs text-green-400 font-medium">Fluent</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-gray-700 text-sm sm:text-base">Norwegian</span>
-                  <span className="text-xs text-blue-600 font-medium">A2/B1 in progress</span>
-                </div>
+        {/* Software & Tools */}
+        <div>
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-800 mb-6 text-center flex items-center justify-center gap-2">
+            <Wrench className="w-6 h-6 text-teal-600" /> Software &amp; Tools
+          </h3>
+          <div className="max-w-4xl mx-auto space-y-3">
+            {software.map((s) => (
+              <div
+                key={s.name}
+                className="flex flex-col sm:flex-row sm:items-center gap-2 bg-gray-50 border border-gray-100 rounded-xl px-5 py-3 shadow-sm"
+              >
+                <span className="font-semibold text-gray-800 w-52 flex-shrink-0 text-sm">{s.name}</span>
+                <span className={`text-xs font-semibold px-2 py-0.5 rounded-full flex-shrink-0 ${levelColor[s.level]}`}>
+                  {s.level}
+                </span>
+                <span className="text-gray-500 text-sm">— {s.detail}</span>
               </div>
-            </div>
-
-            <div className="bg-gradient-to-br from-teal-50 to-cyan-50 p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
-              <Wrench className="w-5 h-5 sm:w-6 sm:h-6 text-teal-600 mb-3" />
-              <h4 className="font-semibold text-gray-800 mb-2 text-sm sm:text-base">
-                BIM &amp; AEC Tools
-              </h4>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {bimTools.map((tool) => (
-                  <span
-                    key={tool}
-                    className="bg-white text-teal-700 border border-teal-200 px-2 py-1 rounded-full text-xs font-medium"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
