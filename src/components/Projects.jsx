@@ -9,6 +9,7 @@ import { useState } from "react";
 
 const bimProjects = [
   {
+    number: "01",
     title: "Canterbury Residencies — 137 Units Residential Development",
     subtitle: "Revit · Navisworks · Tekla Structural Designer · MS Project · Enscape",
     description:
@@ -25,8 +26,10 @@ const bimProjects = [
     featured: true,
     role: "Site Engineer — Homelands Skyline (Pvt) Ltd, Sri Lanka",
     duration: "2021 – 2022",
+    result: "Reduced design revisions by ~15% through accurate model & RFI management",
   },
   {
+    number: "02",
     title: "Residential Buildings",
     subtitle: "Revit · AutoCAD · Enscape · MS Office",
     description:
@@ -43,8 +46,10 @@ const bimProjects = [
     featured: true,
     role: "Site Engineer — Nikko Construction (Pvt) Ltd, Sri Lanka",
     lod: "LOD 100–350",
+    scope: "Architectural & structural drawing set, door/window schedules, BOQ & take-offs",
   },
   {
+    number: "03",
     title: "Structural Analysis & Design Checks — Tekla Structural Designer",
     subtitle: "Tekla Structural Designer",
     description:
@@ -60,8 +65,10 @@ const bimProjects = [
     status: "Completed",
     featured: false,
     scope: "Wind, seismic & snow load analysis, wind-drift checks, member design to Eurocode",
+    result: "Ran wind-drift checks across load combinations on a multi-storey steel-framed structure, flagging drift exceedances for design review",
   },
   {
+    number: "04",
     title: "Clash Detection & Model Coordination — Navisworks",
     subtitle: "Navisworks Manage",
     description:
@@ -77,8 +84,10 @@ const bimProjects = [
     status: "Completed",
     featured: false,
     scope: "Federated ARC / STR / MEP coordination",
+    result: "Identified and resolved hard clashes before construction, reducing rework and improving design coordination",
   },
   {
+    number: "05",
     title: "4D Construction Sequencing — Navisworks TimeLiner",
     subtitle: "Navisworks Manage — TimeLiner",
     description:
@@ -94,6 +103,7 @@ const bimProjects = [
     status: "Completed",
     featured: false,
     scope: "4D construction sequencing linking a federated LOD 350 coordination model to the project schedule",
+    result: "Simulated the full construction sequence of a commercial building, from foundations to structural completion, for schedule validation and stakeholder review",
   },
   {
     title: "BIM Construction Project Manager",
@@ -252,7 +262,13 @@ function Projects() {
               <div className="flex items-start justify-between mb-3">
                 <div className="flex items-center gap-3">
                   {activeTab === "bim" ? (
-                    <Layers className="w-6 h-6 text-teal-600 flex-shrink-0" />
+                    project.number ? (
+                      <span className="w-9 h-9 rounded-lg bg-gradient-to-br from-teal-600 to-blue-700 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">
+                        {project.number}
+                      </span>
+                    ) : (
+                      <Layers className="w-6 h-6 text-teal-600 flex-shrink-0" />
+                    )
                   ) : (
                     <Building2 className="w-6 h-6 text-teal-600 flex-shrink-0" />
                   )}
@@ -274,11 +290,14 @@ function Projects() {
                 </span>
               </div>
 
-              {(project.role || project.location || project.duration || project.lod || project.scope) && (
+              {(project.role || project.location || project.duration || project.lod || project.scope || project.result) && (
                 <div className="flex flex-col gap-0.5 text-xs text-gray-500 mb-3">
                   {project.role && <span>👷 {project.role}</span>}
                   {project.lod && <span>📐 LOD: {project.lod}</span>}
                   {project.scope && <span>🔍 {project.scope}</span>}
+                  {project.result && (
+                    <span className="text-teal-700 font-medium">✓ {project.result}</span>
+                  )}
                   <div className="flex gap-4">
                     {project.location && <span>📍 {project.location}</span>}
                     {project.duration && <span>📅 {project.duration}</span>}
