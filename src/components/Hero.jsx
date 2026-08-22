@@ -32,7 +32,7 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
   ];
 
   const rolesWithoutAspiring = [
-    "BIM Engineer",
+    "BIM Modeler",
     "BIM Coordinator",
     "Digital Construction Specialist",
     "Civil & Structural Engineer",
@@ -74,7 +74,6 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
     }
   }, [charIndex, isDeleting, currentRole, roles, rolesWithoutAspiring]);
 
-
   // Form validation
   const validateForm = () => {
     const newErrors = {};
@@ -91,8 +90,6 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
 
     if (!message.trim()) {
       newErrors.message = "Message is required";
-    } else if (message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters";
     }
 
     setErrors(newErrors);
@@ -111,7 +108,6 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
     e.preventDefault();
 
     if (!validateForm()) {
-      showToastMessage("Please fix the errors in the form", "error");
       return;
     }
 
@@ -124,12 +120,12 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
           from_email: email,
           message: message,
         },
-        "73jkaxIQjcnGN8pWm"
+        "73jkaxIQjcnGN8pWm",
       )
       .then(() => {
         showToastMessage(
           "Message sent successfully! I'll get back to you soon.",
-          "success"
+          "success",
         );
         setIsContactModalOpen(false);
         setName("");
@@ -141,11 +137,10 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
         console.error("EmailJS error:", error);
         showToastMessage(
           "Failed to send message. Please try again later.",
-          "error"
+          "error",
         );
       });
   };
-
 
   return (
     <section
@@ -242,7 +237,6 @@ function Hero({ isContactModalOpen, setIsContactModalOpen }) {
             >
               View BIM Projects
             </button>
-
 
             {/* Contact Me Button */}
             <button
